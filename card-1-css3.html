@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS > What's it? @hairton</title>
+
+    <!-- ESTILOS LINKS -->
+
+    <link rel="icon" href="img/iconPersonal.png">
+    <link rel="stylesheet" href="styles/generalStyle.css">
+    <link rel="stylesheet" href="styles/templateGrid.css">
+
+    <!-- GOOGLE FONTS -->
+
+    <!--TITULOS-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!--PARRAFOS-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!-- INTROS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!--ENLACES-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <!-- BLOCK HEADER -->
+    
+    <header class="header">
+        <a href="index.html"><img class="header__image" src="img/cube2.png" alt="cubo one header"></a>
+        <h1 class="header__title-principal">Hairton M.</h1>
+    </header>
+
+    <!-- BLOCK DARK MODE -->
+
+    <div class="btn_dark_mode">Dark Mode</div>
+
+    <!-- BLOCK NAV -->
+    
+    <nav class="main-menu">
+        <p class="main-menu__switch"><img src="img/icon_plus_menu.svg" alt="icon switch menu" class="main-menu__icon"></p>
+
+        <ul class="menu-principal">
+            <li class="menu-principal__item"><a class="menu-principal__link" href="index.html">Home</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="news.html">News</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="blog.html">Blog</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="proyects.html">Proyects</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="courses.html">Courses</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="info-author.html">Author</a></li>
+        </ul>  
+    </nav>
+
+    
+    <div class="main-content">
+        <section class="section">
+            <article class="article">
+                <h3 class="article__title">¿Qué es CSS3?</h3>
+                
+                <span class="article__intro">
+                    En esta sección vamos a hablar de ¿Qué es CSS? y ¿Qué es en realidad CSS3?
+                </span>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    <b class="font-bold">CSS</b>, es un lenguaje de estilos y diseño que permite a nuestra website y aplicaciones web, poder tener un diseño no solo con estilo y un buen concepto del color. Además permite hacer <b class="font-bold">Responsive Web Design.</b>
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Ahora bien en CSS se trabajan por módulos en donde cada módulo tiene diferentes versiones. El nombre <b class="font-bold">CSS3</b>, es un nombre comercial ya que de manera veridica y pública no hay una <b class="font-bold">versión 3</b> de este lenguaje de estilos.
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">   
+                    Ahora bien cada módulo en CSS te permite tener mejores cosas y funcionalidades al momento de <b class="font-bold">diseñar y maquetar una web</b>, para mayor información visita el siguiente link <b class="font-bold"><a href="https://developer.mozilla.org/es/docs/Archive/CSS3">Módulos CSS</a></b>.
+                </p>
+
+                <img src="img/css-code.png" alt="code of css" class="codes codes--bigDevice">
+            </article>    
+        </section>
+
+
+        <aside class="aside">
+        </aside>
+    </div>
+
+
+    <footer class="footer"> <!-- BLOCK footer -->
+        <span class="footer__copy-right">Copyright (c) 2020 por Hairton Mayhuay</span>
+
+        <div class="socialCode"> <!-- BLOCK socialCode -->
+                <h6 class="socialCode__title">Mi código</h6>
+
+                <a class="socialCode__codepen-link" href="https://codepen.io/dashboard/" target="_blank" class="codepen">codepen.io</a>
+                    
+                <a class="socialCode__jsFiddle-link" href="https://jsfiddle.net/user/fiddles/all/" target="_blank" class="jsfiddle">JSFiddle</a>
+        </div>
+
+        <div class="socialNetworks"> <!-- BLOCK socialNetworks -->
+            <h6 class="socialNetworks__title">Redes Sociales</h6>
+
+            <div class="iconsSocialNetworks"> <!-- BLOCK iconsSocialNetworks-->
+                <a href="#" target="_blank" class="iconsSocialNetworks__item"><img src="img/linkedin.png" alt="icon linkedin" class="iconsSocialNetworks__image iconLinkeding"></a>
+
+                <a href="#"class="iconsSocialNetworks__item"><img src="img/youtube.png" alt="icon youtube" class="iconsSocialNetworks__image iconYoutube"></a>
+
+                <a href="#" class="iconsSocialNetworks__item" ><img src="
+                    img/facebook.png" alt="icon facebook" class="iconsSocialNetworks__image iconFacebook"></a>
+
+                <a href="#" class="iconsSocialNetworks__item"><img src="img/twitter.png" alt="icon twitter" class="iconsSocialNetworks__image iconTwitter"></a>
+
+                <a href="#" class="iconsSocialNetworks__item"><img src="img/instagram.png" alt="icon instagram" class="iconsSocialNetworks__image iconImstagram"></a>
+
+                <a href="#" class="iconsSocialNetworks__item"><img src="img/whatsapp.png" alt="icon whatsapp" class="iconsSocialNetworks__image iconWhatsapp"></a>
+            </div>
+
+            <div class="main-modal">
+                <div class="modal-box">
+                    <h1 class="modal-box__title"></h1>
+                    <img src="" alt="my Photo" class="modal-box__img">
+                    <p class="modal-box__desc"></p>
+                    <span class="modal-box__close">&times;</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="go-up"></div>
+    </footer>
+
+    <script src="script/menu.js"></script>
+    <script src="script/modalBox.js"></script>
+    <script src="script/go-to-up.js"></script>
+    <script src="script/darkMode.js"></script>
+</body>
+</html>

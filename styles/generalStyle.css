@@ -1,0 +1,1403 @@
+*, 
+*::before, 
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* variables para mi website */
+
+:root{
+
+    /* font-size */
+
+    --size_h1: 2.9em;
+    --size_h2: 2.70em;
+    --size_h3: 2.55em;
+    --size_h4: 2em;
+    --size_h5: 1.65em;
+    --size_h6: 1.55em;
+    --size_p: 1.40em;
+    --size_span: 1.22em;
+    --size_a: 1.20em;
+    --size_fontBold: 0.85em;
+    --size_cardsTitle: 1.30em;
+    --size_cardsDescription: 1.15em;
+    --size_titlePanelAcordion: 1.75em;
+    --size_asideInfoLink: 1.17em;
+    --size_paragraphAside: 1.10em;
+
+    /* font-family */
+
+    --fontFamilyTitulos: 'Raleway', 'Arial', sans-serif;
+    --fontFamilyParrafos: 'Roboto', 'Verdana', sans-serif;
+    --fontFamilyIntros: 'Lato', 'Helvetica' sans-serif;
+    --fontFamilyFooterEnlaces: 'Open Sans', 'Abril Fatface', sans-serif;
+
+    /* colors font */
+
+    --color_white: #fff;
+    --colorEEE: #eee;
+    --colorDDD: #ddd;
+    --color_black: #222;
+    --color_steelblue: steelblue;
+    --color_span: #003666;
+    --color_p: #4d4f53;
+    --color_titlePanelAcordion: rgba(0, 0, 255, 0.75);
+    --colorFontBold: rgba(0, 0, 255, 0.65);
+    
+    /* backColor Elements */
+
+    --backColorHeader: rgba(73, 72, 72, 1);
+    --backColorMenuGeneral: rgba(0, 0, 0, 1);
+    --backColorCardDescription: #ef5734;
+    --backColorCardsTitle: rgba(0, 0, 0, 0.75);
+    --backColorAcordionButton: rgba(36, 113, 173, 0.95);
+    --backColorActiveAcordionButton: rgba(39, 144, 225, 1);
+    --backColorCarousel: rgba(0, 0, 0, 0.53);
+    --backColorSlidesCarousel: rgba(0, 0, 0, 0.46);
+    --backColorAsideInfo: rgba(0, 0, 0, 0.125);
+    --backColorAsideInfoTitle: #00a4e4;
+    --backColorArticleTitlte: #1371be;
+    --back_color_footer: #4d4f53;
+    --backColorModal: rgba(0, 0, 0, 0.40);
+    
+    /* width & height */
+
+    --widthCubeLogo: 3.5em;
+    --heightCubeLogo: 3.5em;
+
+    --widthIconMenu: 2.5em;
+    --heightIconMenu: 2.5em;
+
+    --widthCardImg: 14em;
+    --heightCardImg: 14em;
+
+    --widthAcordionImg: 1.5em;
+    --heightAcordionImg: 1.5em;
+
+    --widthSlidesImg: 10em;
+    --heihgtSlidesImg: 10em;
+
+    --widthAsideInfoImg: 7em;
+    --heightAsideInfoImg: 7em;
+}
+
+
+/* *********************** ESTILOS PARA EL HEADER EN MOBILES  *********************** */
+
+.header{
+    /*outline: 2px solid blue;*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    background-color: var(--backColorHeader);
+    margin: 0;
+    padding: 0;
+    z-index: 30;
+}
+
+.header__image{
+    /*outline: 2px solid red;*/
+    width: var(--widthCubeLogo);
+    height: var(--heightCubeLogo);
+    margin: 0 1em 0 1em;
+    animation: front_back_iconLogo .8s alternate infinite;
+}
+
+@keyframes front_back_iconLogo{
+    from{
+        transform: scale(0.55);
+    }
+    to{
+        transform: scale(0.95);
+    }
+}
+
+.header__title-principal{
+    /*outline: 2px solid green;*/
+    font-size: var(--size_h1);
+    font-family: var(--fontFamilyTitulos);
+    margin: 0;
+    padding: 0.20em 0;
+    color: var(--color_black);
+}
+
+/* *********************** ESTILOS PARA EL NAV EN MOBILES *********************** */
+
+.main-menu{
+    /*outline: 2px solid seagreen;*/
+    position: fixed;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 2.9em;
+    margin: 4.65em 0 0 0;
+    padding: 0;
+    background-color: var(--backColorMenuGeneral);
+    z-index: 20;
+}
+
+.main-menu__switch{
+    margin: 0;
+}
+
+.main-menu__icon{
+    display: block;
+    width: var(--widthIconMenu);
+    height: var(--heightIconMenu);
+    margin: 0 0 0 0.2em;
+    padding: 0.4em 0 0 0;
+}
+
+.menu-principal{
+    position: absolute;
+    top: 2.905em;
+    left: 0;
+    display: none;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 18em;
+    height: 100vh;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    list-style: none;
+    background-color: var(--backColorMenuGeneral);
+    animation: left_right_menu .7s alternate;
+}
+
+@keyframes left_right_menu{
+    from{
+        left: -18em;
+    }
+    to{
+        left: 0;
+    }
+}
+
+.menu-principal__item{
+    width: 100%;
+    line-height: 4em;
+}
+
+.menu-principal__link{
+    outline: none;
+    display: block;
+    font-size: var(--size_a);
+    text-decoration: none;
+    color: var(--colorEEE);
+    padding: 0 0 0 1em;
+}
+
+.menu-principal__item:hover, .menu-principal__item:active{
+    color: var(--color_white);
+    font-weight: 600;
+}
+
+/* *********************** ESTILOS PARA EL SECTION EN MOBILES *********************** */
+
+.main-content{
+    /*outline: 2px solid blue;*/
+    padding: 9.5em 0 0 0;
+}
+
+.article__title{
+    /*outline: 2px solid blue;*/
+    display: block;
+    width: 100%;
+    margin: 1.5em 0 1.5m 0;
+    padding: 0.12em 0.1em;
+    text-align: center;
+    font-size: var(--size_h2);
+    font-family: var(--fontFamilyTitulos);
+    background-color: var(--backColorArticleTitlte);
+    color: var(--color_white);
+}
+
+.article__img{
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: 0.5em auto;
+}
+
+.article__img--total{ /* MODIFIER OF MODEL BEM OF CSS (BLOCK, ELEMENT & MODIFIER) */
+    width: 100%;
+}
+
+.article__img--bigDevice{ /* MODIFIER OF THE MODEL BEM OF CSS (BLOCK, ELEMENT & MODIFIER */
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: 0.5em auto;
+}
+
+.article__intro{
+    /*outline: 2px solid red;*/
+    display: inline-block;
+    width: 100%;
+    margin: 0.75em 0;
+    padding: 0.5em 1em  0.5em 1em;
+    line-height: 1.6em;
+    font-size: var(--size_span);
+    color: var(--color_span);
+    border: 1.5px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 12px 4px rgba(0, 0, 0, 0.10);
+    font-family: var(--fontFamilyIntros);
+    font-weight: 500;
+    font-style: italic;
+}
+
+.article__intro::before{
+    display: inline-block;
+    content: url("../img/imgIconIntro.png");
+    margin: 0 0.25em 0 0;
+}
+
+.font-bold{
+    /*outline: 2px solid blue;*/
+    color: var(--colorFontBold);
+    font-size: var(--size_fontBold);
+}
+
+.font-bold--infoBlog{ /* ES UN MODIFICADOR (USANDO EL MODELO BEM) */
+    /*outline: 2px solid red;*/
+    color: rgba(255, 0, 0, 0.75);
+    font-size: 0.95em;
+}
+
+
+/* estilos para los parrafos dentro de mi webiste */
+
+.paragraph{
+    display: block;
+    width: 100%;
+    line-height: 1.6em;
+    padding: 0.20em 0.7em 0.20em 1em;
+    margin: 1em 0;
+    font-size: var(--size_p);
+    color: var(--color_p);
+    font-family: var(--fontFamilyParrafos);
+}
+
+/* ESTILOS PARA LOS CARDS EN MI WEBSITE */
+
+.content-cards{
+    padding: 0;
+    margin: 0;
+}
+
+.cards{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 14em;
+    height: auto;
+    margin: 2.5em auto;
+    border: 3px solid #ddd;
+    /*border: 3px solid rgba(0, 0, 0, 0.65);*/
+    border-top-left-radius: 2.5em;
+    border-bottom-right-radius: 2.5em;
+    box-shadow: 0 2px 10px #222;
+}
+
+.cards:active{
+    transform: scale(0.95);
+    box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.45);
+}
+
+.cards__img{
+    width: var(--widthCardImg);
+    height: var(--heightCardImg);
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.cards__title{
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 0.5em 0.25em 0.7em 0.25em;
+    background-color: var(--backColorCardsTitle);
+    font-size: var(--size_cardsTitle);
+    font-family: var(--fontFamilyTitulos);
+    color: var(--color_white);
+    margin: 0;
+    text-decoration-color: steelblue;
+    text-decoration-line: underline;
+}
+
+.cards__title:active, .cards__title:hover{
+    color: steelblue;
+}
+
+.cards__description{
+    margin: 0;
+    padding: 0.5em 0.25em 0.5em 1em;
+    font-size: var(--size_cardsDescription);
+    color: var(--color_black);
+    font-weight: 600;
+    background-color: var(--backColorCardDescription);
+    border-bottom-right-radius: 2em;
+}
+
+/* ESTILOS PARA EL ARCORDIÓN EN EL HTML BLOG */
+
+.acordion{
+    /*outline: 2px solid blue;*/
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 2em auto;
+    padding: 0;
+}
+
+.acordion__button{
+    outline: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 0  0 2em 0;
+    padding: 0.5em 0 0.5em 2em;
+    color: var(--colorDDD);
+    font-size: var(--size_span);
+    line-height: 2em;
+    border-radius: 0.5em;
+    background-color: var(--backColorAcordionButton);
+}
+
+.acordion__button::before{
+    content: url("../img/icon_arrow_down.png");
+    position: relative;
+    left: -1em;
+    bottom: -0.2em;
+    display: inline-flex;
+    margin: 0 0 0 0;
+    padding: 0;
+    width: var(--widthAcordionImg);
+    height: var(--heightAcordionImg);
+}
+
+.acordion__button:active{
+    transform: scale(0.98);
+    color: var(--color_white);
+    background-color: var(--backColorActiveAcordionButton);
+}
+
+
+/* estilos para el panel acordion */
+
+.panel-acordion{
+    display: none;
+}
+
+.panel-acordion__title{
+    text-align: center;
+    font-size: var(--size_titlePanelAcordion);
+    margin: 0;
+    padding: 0.5em 0.25em;
+    color: var(--color_titlePanelAcordion);
+}
+
+.panel-acordion__img{
+    /*outline: 2px solid red;*/
+    display: block;
+    width: 100%;
+    padding: 0.25em;
+    margin: 0;
+}
+
+.panel-acordion__img--small{
+    /*outline: 2px solid blue;*/
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* ESTILOS PARA EL CAROUSEL IMAGES */
+
+.main-carousel{
+    display: block;
+    padding: 2em;
+    margin: 4em auto;
+    background-color: var(--backColorCarousel);
+}
+
+.slides{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    border: 3px solid #ddd;
+    background-color: var(--backColorSlidesCarousel);
+    border-radius: 2em;
+    box-shadow: -9px 12px 15px rgba(0, 0, 0, 0.26);
+}
+
+.slides__img{
+    flex: 1 1 auto;
+    width: var(--widthSlidesImg);
+    height: var(--heihgtSlidesImg);
+}
+
+.slides__title{
+    flex: 1 1 auto;
+    font-size: var(--size_h4);
+    color: var(--colorDDD);
+    margin: 0.5em 0;
+    font-family: var(--fontFamilyTitulos);
+}
+
+.slides__list{
+    margin: 0;
+    font-size: var(--size_a);
+    padding: 0;
+}
+
+.slides__listItem{
+    line-height: 1.6em;
+    color: var(--colorEEE); 
+    font-family: var(--fontFamilyParrafos);
+}
+
+.slides__link{
+    /*outline: 2px solid red;*/
+    color: var(--colorEEE);
+    border-bottom: 4px solid steelblue;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* ESTILOS PARA LOS BOTONES DE DOWNLOAD THE SOURCE CODE */ 
+
+
+.button-link{
+    /*outline: 2px solid blue;*/
+    display: block;
+    width: 15em;
+    line-height: 3em;
+    text-align: center;
+    margin: 2em auto;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid rgba(0, 0, 0, 0.56);
+    border-radius: 0.375em;
+    background-color: steelblue;
+    box-shadow: 3px 0 7px rgba(0, 0, 0, 0.45);
+}
+
+.button-link:active{
+    transform: scale(0.88);
+    box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.95);
+}
+
+/* ESTILOS PARA EL BOX DE CONTENIDOS DENTRO DE LA SECCIÓN "BLOG" */
+
+
+.main-blog{
+    /*outline: 2px solid red;*/
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+.blog-info{
+    /*outline: 2px solid blue;*/
+    display: block;
+    width: 100%;
+    margin:  0 0 2em 0;
+}
+
+.blog-info__title{
+    /*outline: 2px solid red;*/
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0.5em 0.2em;
+    text-align: center;
+    color: var(--colorEEE);
+    font-family: var(--fontFamilyTitulos);
+    background-color: var(--backColorHeader);
+}
+
+.blog-info__autor{
+    /*outline: 2px solid green;*/
+    display: block;
+    font-size: 0.9em;
+    color: #222;
+    font-weight: 600;
+    padding: 0.5em;
+    margin: 2em 0;
+    text-align: center;
+    font-family: "Roboto", "Verdana", sans-serif;
+    box-shadow: 0 4px 10px  rgba(0, 0, 0, 0.26);
+    border-radius: 1em;
+}
+
+/* *********************** ESTILOS PARA EL ASIDE EN MOBILES ***********************  */
+
+.aside{
+    padding: 2em;
+}
+
+.aside-info{
+    background-color: var(--backColorAsideInfo);
+    margin: 0 0 3em 0;
+}
+
+.aside-info__title{
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    font-size: var(--size_h6);
+    font-family: var(--fontFamilyTitulos);
+    padding: 0.5em;
+    background-color: var(--backColorAsideInfoTitle);
+    color: var(--color_white);
+}
+
+.aside-info__img{
+    display: block;
+    width: var(--widthAsideInfoImg);
+    height: var(--heightAsideInfoImg);
+    margin: 1em auto;
+}
+
+.aside-info__link{
+    font-size: var(--size_asideInfoLink);
+    text-decoration: none;
+    animation: changeColorInfinite 1.5s alternate ease-in-out infinite;
+}
+
+@keyframes changeColorInfinite{
+    from{
+        color: rgba(255, 0, 0, 0.75);
+        font-weight: 800;
+    }
+    to{
+        color: #eee;
+    }
+}
+
+.aside-info__link::before{
+    content: "►";
+    margin: 0 0 0 0.15em;
+}
+
+.paragraph--aside{
+    font-size: var(--size_paragraphAside);
+    padding: 1em;
+}
+
+/* esta clase me permite dar estilos a las imagen de codigos que tenga (carbon) */
+
+.codes{
+    /*outline: 2px solid blue;*/
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0em;
+}
+
+.codes--bigDevice{
+    width: 50%;
+}
+
+/* ********************** ESTILOS PARA EL FOOTER EN MOBILES *********************** */ 
+
+.footer{
+    width: 100%;
+    height: 100%;
+    background-color: var(--back_color_footer);
+    padding: 0.5em 0 0 0;
+    margin: 0;
+}
+
+.footer__copy-right{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.7em 0 0 0;
+    font-size: var(--size_span);
+    color: var(--color_white);
+}
+
+.socialCode{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 1.75em 0 0 0;
+    padding: 0;
+}
+
+.socialCode__title{
+    text-align: center;
+    font-size: var(--size_h6);
+    font-family: var(--fontFamilyTitulos);
+    color: var(--color_black);
+    margin: 0;
+    padding: 0.15em 0;
+}
+
+.socialCode__codepen-link{
+    display: inline-flex;
+    align-items: center;
+    color: var(--color_white);
+    font-size: var(--size_a);
+    font-family: var(--fontFamilyFooterEnlaces);
+    font-weight: 500;
+    margin: 0.5em 0;
+}
+
+.socialCode__codepen-link::before{
+    content: url("../img/codepen.png");
+    display: inline-flex;
+    max-width: 1.8em;
+    max-height: 1.8em;
+    align-items: center;
+    margin: 0 0.5em 0 2em;
+    padding: 0;
+}
+
+.socialCode__jsFiddle-link{
+    display: inline-flex;
+    align-items: center;
+    color: var(--color_white);
+    font-size: var(--size_a);
+    font-family: var(--fontFamilyFooterEnlaces);
+    font-weight: 500;
+    margin: 0.5em 0;
+}
+
+.socialCode__jsFiddle-link::before{
+    content: url("../img/icon-jsfiddle.png");
+    display: inline-flex;
+    max-width: 1.8em;
+    max-height: 1.8em;
+    align-items: center;
+    margin: 0 0.5em 0 2em;
+    padding: 0;
+}
+
+.socialNetworks__title{
+    display: block;
+    width: 100%;
+    font-size: var(--size_h6);
+    font-family: var(--fontFamilyTitulos);
+    color: var(--color_black);
+    text-align: center;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.iconsSocialNetworks{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 1em 0;
+    background-color: #222;
+}
+
+.iconsSocialNetworks__image{
+    flex: 1;
+    width: 1.75em;
+    height: auto;
+}
+
+/* ESTILOS PARA EL CUADRO DE DIALOGO QUE SE MOSTRARA CUANDO EL USUARIO PRESIONE LOS ICONOS DE SOCIAL MEDIA */
+
+.main-modal{
+    /*outline: 2px solid blue;*/
+    position: fixed;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    padding-top: 35em;
+    overflow: auto;
+    z-index: 50;
+    background-color: var(--backColorModal)
+}
+
+.iconsSocialNetworks{
+    position: relative;
+    /*outline: 2px solid blue;*/
+}
+
+.modal-box{
+    /*outline: 2px solid red;*/
+    position: relative;
+    bottom: 4.5em;
+    display: block;
+    width: 90%;
+    margin: 1em;
+    background-color: var(--backColorHeader);
+    z-index: 60;
+}
+
+.modal-box__title{
+    color: var(--colorEEE);
+    font-size: var(--size_h5);
+    text-align: center;
+    margin: 0;
+    padding: 0.25em 0.1em;
+}
+
+.modal-box__img{
+    display: block;
+    width: 4.7em; 
+    height: 4.7em;
+    margin: 0 auto;
+}
+
+.modal-box__desc{
+    color: var(--colorDDD);
+    line-height: 1.6em;
+    font-size: 1.05em;
+    padding: 0.30em 0.8em;
+    margin: 0;
+}
+
+.modal-box__link{
+    color: var(--color_steelblue);
+    text-decoration: none;
+    font-size: 1.15em;
+}
+
+.modal-box__link::after{
+    content: "►";
+    margin-left: 0.5em;
+}
+
+.modal-box__close{
+    color: var(--colorDDD);
+    font-size: 1.3em;
+    position: absolute;
+    top: 0;
+    right: 0.25em;
+}
+
+/* ESTILOS PARA EL IR-ARRIBA */
+
+.go-up{
+    /*outline: 2px solid blue;*/
+    position: fixed;
+    bottom: 4.5em;
+    right: 1em;
+    display: none;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+    border: 2px solid #222;
+    transition: all .6s ease-in-out;
+    animation: front-back .6s alternate;
+    /*z-index: 70;*/
+}
+
+@keyframes front-back{
+    from{
+        transform: scale(0.5);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+.go-up::after{
+    content: url("../img/icon-go-up.png");
+    /*outline: 2px solid blue;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    object-fit: cover;
+}
+
+.go-up--show{
+    display: block;
+}
+
+
+/* *********************** ESTILOS PARA EL DARK MODE *********************** */
+
+/* ESTILOS para el botón que acciona el Dark Mode */
+
+body{
+    position: relative;
+}
+
+.btn_dark_mode{
+    /*outline: 2px solid blue;*/
+    position: absolute;
+    display: block;
+    width: 10em;
+    top: 9em;
+    right: 0.7em;
+    line-height: 2em;
+    text-align: center;
+    font-family: var(--fontFamilyIntros);
+    font-style: oblique;
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid #222;
+    border-radius: 0.5em;
+    background-color: rgba(0, 0, 0, 0.76);
+}
+
+.btn_dark_mode:active{
+    transform: scale(0.85);
+}
+
+/* CLASE darkmode para el body */
+
+.darkmode{
+    background-color: rgba(73, 72, 71, 1);
+}
+
+.darkmode .btn_dark_mode{ /*  estilos para el boton dark mode */ 
+    color: #222;
+    background-color: #ddd;
+    border: 2px solid rgba(0, 0, 0, 0.36);
+}
+
+.darkmode .article__intro{
+    /*outline: 2px solid white;*/
+    color: white;
+    border: 0.5px solid #ddd;
+    box-shadow: 0 2px 7px rgba(255, 255, 255, 0.26);
+}
+
+.darkmode .font-bold{
+    color: #fff;
+}
+
+
+.darkmode .paragraph{
+    color: rgba(255, 255, 255, 0.56);
+}
+
+.darkmode .panel-acordion__title, .blog-info__title{
+    color: rgba(35, 151, 219, 1);
+}
+
+.darkmode .blog-info__autor{
+    color: rgba(179, 173, 173, 0.842);
+    border-radius: 0;
+}
+
+
+/* -------------------------- UTILIZANDO MEDIA QUERIES -------------------------- */
+
+
+/* BREAKPOINT PARA TABLETS */
+
+
+@media screen and (min-width: 768px){
+
+    
+    /* ***************************** ESTILOS PARA EL HEADER EN TABLETS ***************************** */
+
+    .header{
+        justify-content: center;
+    }
+
+    .header__title-principal{
+        color: var(--color_white);
+        text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.45);
+    }
+
+    .header__image{
+        animation: front_back_iconLogo 1.25s alternate infinite;
+    }
+    
+    @keyframes front_back_iconLogo{
+        from{
+            transform: scale(0.48);
+        }
+        to{
+            transform: scale(0.95);
+        }
+    }
+
+    /* ***************************** ESTILOS PARA EL NAV EN TABLETS ***************************** */
+
+    .main-menu{
+        padding: 0;
+    }
+
+    .menu-principal{
+        width: 22.5em;
+        animation: left_right_menu 1.25s alternate;
+    }
+
+    @keyframes left_right_menu{
+        from{
+            left: -23em;
+        }
+        to{
+            left: 0;
+        }
+    }
+
+    .menu-principal__link{
+        font-size: 1.25em;
+        padding: 0 0 0 2em;
+    }
+
+    /* ***************************** ESTILOS PARA EL SECTION EN TABLETS ***************************** */
+
+
+    .codes{
+        /*outline: 2px solid blue;*/
+        display: block;
+        width: 100%;
+        padding: 0.5em;
+        margin: 0;
+    }
+
+    /* ***************************** ESTILOS PARA EL ASIDE EN TABLETS ***************************** */
+
+    .aside{
+        /*outline: 2px solid blue;*/
+        margin: 2.75em 0 0 0;
+        padding-top: 0;
+    }
+
+    .aside-info__img{
+        /*outline: 2px solid green;*/
+        display: block;
+        width: 6em;
+        height: 6em;
+    }
+
+    .paragraph--aside{
+        font-size: 0.95em;
+    }
+ 
+    /* ***************************** ESTILOS PARA EL FOOTER EN TABLETS ***************************** */
+
+    /* ESTILOS PARA EL CUADRO DE DIALOGO QUE SE MOSTRARA CUANDO EL USUARIO PRESIONE LOS ICONOS DE SOCIAL MEDIA */
+
+    .main-modal{
+        padding: 40em 0 0 0;
+    }
+
+    .modal-box{
+        display: block;
+        width: 30em; /* 480 px*/ 
+        margin: 1em auto;
+        padding: 0;
+    }
+
+    .modal-box__close{
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    .modal-box__desc{
+        font-size: 1.15em;
+        padding: 0.5em 1em 0.5em 1em;
+    }
+
+}
+
+
+/* BREAKPOINT PARA COMPUTADORAS Y LAPTOPS  */
+
+@media screen and (min-width: 1024px){
+
+    /* ***************************** ESTILOS PARA EL HEADER EN LAPTOPS Y COMPUTADORAS 
+    ***************************** */
+
+    .header{
+        justify-content: flex-start;
+    }
+
+    .header__image{
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    .header__title-principal{
+        font-size: 2.5em;
+        color: var(--color_white);
+    }
+
+    /* ***************************** ESTILOS PARA EL NAV EN LAPTOPS Y COMPUTADORAS ***************************** */
+
+    .main-menu{
+        outline: 2px solid blue;
+        position: fixed;
+        display: block; 
+        top: 0.85em;
+        right: 0.25em;
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.02);
+        z-index:  40;
+    }
+
+    .main-menu__switch, .main-menu__icon{
+        /*outline: 2px solid green;*/
+        display: none;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    /*.main-menu__switch:hover{
+        cursor: pointer;
+    }*/
+
+    .menu-principal{
+        /*outline: 2px solid blue;*/
+        position: absolute;
+        top: -0.5em;
+        left: -50em;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        width: 50em;
+        height: 3em;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.02);
+        animation: none;
+        /*transition: all 4s ease-in;*/
+    }
+
+    .menu-principal__item{
+        /*outline: 2px solid blue;*/
+        box-shadow: 2px 0 0 #222 inset;
+        padding: 0.5em;
+        line-height: 1em;
+        transition: all .6s;
+    }
+
+    .menu-principal__item:hover{
+        box-shadow: 10em 0 0 #222 inset;
+    }
+
+    .menu-principal__link{
+        font-size: 1.07em;
+    }
+
+    .menu-principal__link:hover{
+        font-size: 1.09em;
+    }
+
+    
+    /* ***************************** ESTILOS PARA EL SECTION EN LAPTOPS Y COMPUTADORAS ***************************** */
+
+    .main-content{
+        /*outline: 2px solid blue;*/
+        display: block;
+        margin: 0;
+        padding: 3em 0 0 0;
+    }
+    
+
+    .article__title{
+        /*outline: 2px solid blue;*/
+        width: 50%;
+        margin: 1em auto 0 auto;
+        padding: 0.15em 0.17em;
+        border-top-right-radius: 1em;
+        border-bottom-left-radius: 1em;
+        border-top-left-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+    }
+
+    .article__img{
+        width: 20%;
+        height: auto;
+        margin: 1.75em auto;
+    }
+
+    .article__intro{
+        display: block;
+        width: 50%;
+        margin: 2em auto;
+        box-shadow: 0 4px 12px 3px rgba(0, 0, 0, 0.15);
+    }
+
+    .paragraph--section-bigDevice{
+        /*outline: 2px solid blue;*/
+        margin: 1.5em 0;
+        padding: 0.5em 10em;
+        line-height: 1.65em;
+    }
+
+    /* ESTILOS PARA EL ACORDION */
+
+    .acordion{
+        /*outline: 2px solid red;*/
+        width: 40em;
+        display: flex;
+        flex-flow: column wrap;
+        padding: 1em;
+    }
+
+    .acordion__button{
+        flex: 1 1 auto;
+        margin: 0.5em 0;
+        transition: all .2s;
+    }
+    
+    .acordion__button:hover{
+        cursor: pointer;
+        background-color: var(--backColorActiveAcordionButton);
+        font-weight: 600;
+    }
+
+    /* ESTILOS PARA LOS CARDS EN MI WEBSITE */
+
+    .content-cards{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 5em 0;
+    }
+
+    .cards{
+        margin:  0;
+        box-shadow: 2px 0 10px 3px rgba(0, 0, 0, 0.26);
+    }
+    
+    .cards:active{
+        box-shadow: 2px 4px 7px 3px rgba(0, 0, 0, 0.56);
+    }
+
+    /* ESTILOS PARA LAS IMAGENES EN CARBON */
+
+    .codes--bigDevice{
+        width: 45%;
+        margin: 1em auto;
+    }
+
+    /* ESTILOS PARA LOS BOTONES QUE ME PERMITEN DESCARGAR EL CÓDIGO DE MIS EJEMPLOS */
+
+    .button-link{
+        outline: none;
+        border-radius: 1.5em;
+    }
+
+    .button-link:hover{
+       color: #fff;
+       border:  3px solid #222;
+       font-size: 1.05em;
+       box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.45);
+    }
+
+    /* ESTILOS PARA EL CAROUSEL IMAGES */
+
+    .main-carousel{
+        /*outline: 4px solid red;*/
+        background-color: #fff;
+        margin: 2em 0 5em 0;
+        padding: 0;
+    }
+
+    .slides{
+        /*outline: 2px solid blue;*/
+        width: 100%;
+        margin: 0 auto;
+        padding: 2em 0;
+        background-image: url("../img/backAsideImage.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        background-attachment: fixed;
+        border: none;
+        border-radius: 0;
+    }
+
+    .slides__title{
+        color: var(--color_black);
+        font-weight: 800;
+    }
+
+    .slides__list, .slides__listItem{
+        font-weight: 700;
+        color: var(--color_black);
+    }
+
+    .slides__link{
+        color: var(--color_steelblue);
+    }
+
+    /* ESTILOS PARA EL BOX DE CONTENIDOS DENTRO DE LA SECCIÓN "BLOG" */
+
+    .main-blog{
+        /*outline: 2px solid blue;*/
+        margin: 1em 0;
+        padding: 0;
+    }
+
+    .blog-info__title{
+        width: 50%;
+        margin: 1em auto;
+        font-size: 1.35em;
+    }
+
+    .blog-info__autor{
+        width: 25%;
+        margin: 0 auto;
+    }
+
+    /* ***************************** ESTILOS PARA EL ASIDE EN LAPTOPS Y COMPUTADORAS ***************************** */
+
+    .aside{
+        /*outline: 2px solid blue;*/
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+        background-image: url("../img/backImageBigDevice.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        margin: 0 0 7em 0;
+        width: 100%;
+        height: 40em;
+    }
+
+    .aside-info{
+        flex: 1;
+        max-width: 25em;
+        margin: 1em;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.78);
+    }
+   
+    .paragraph--aside{
+        color: var(--color_white);
+    }
+
+    .font-bold--aside{
+        color: steelblue;
+        font-weight: 700;
+    }
+
+    /* ********************** ESTILOS PARA EL FOOTER EN LAPTOPS Y COMPUTADORAS ********************** */
+
+    .socialCode__codepen-link, .socialCode__jsFiddle-link{
+        width: 15%;
+        transition: all .5s;
+    }
+
+    .socialCode__codepen-link:hover, .socialCode__jsFiddle-link:hover{
+        color: rgba(255, 255, 255, 1);
+        text-decoration: none;
+        font-size: 1.30em;
+        font-weight: 600;
+        text-shadow: -2px -1px 4px rgba(0, 0, 0, 0.76);
+    }
+
+    .socialCode__codepen-link:hover::after, .socialCode__jsFiddle-link:hover::after{
+        content: url("../img/linkToMyCode.png");
+        display: inline-flex;
+        margin-left: 0.5em;
+        widtH: 1.05em;
+        height: 1.05em;
+    }
+
+    .iconsSocialNetworks__image{
+        width: 1.85em;
+        transition: all .7s;
+    }
+
+    .iconsSocialNetworks__image:hover{
+        transform: scale(1.5);
+    }
+
+    
+    /* ESTILOS PARA EL CUADRO DE DIALOGO QUE SE MOSTRARA CUANDO EL USUARIO PRESIONE LOS ICONOS DE SOCIAL MEDIA */
+
+
+    .main-modal{
+        padding: 30em 0 0 0;
+    }
+
+    .modal-box__close{
+        font-size: 1.7em;
+        margin: 0;
+        transition: all 0.6s;
+    }
+
+    .modal-box__close:hover{
+        cursor: pointer;
+        color: var(--color_white);
+        font-size: 1.85em;
+    }
+
+    .modal-box__close:active{
+        transform: scale(0.95);
+    }
+
+    
+    /* ESTILOS PARA EL IR-ARRIBA */
+
+    .go-up{
+        width: 3em;
+        height: 3em;
+        border: 3px solid rgba(0, 0, 0, 0.40);
+        background-color: steelblue;
+    }
+
+    .go-up:hover{
+        cursor: pointer;
+        background-color: #fff;
+    }
+
+    .go-up:active{
+        transform: scale(0.95);
+    }
+
+    /* *********************** ESTILOS PARA EL DARK MODE *********************** */
+
+    /* ESTILOS para el botón que acciona el Dark Mode */
+
+    .main-content{
+        padding: 5.5em 0 0 0;
+    }
+
+    .btn_dark_mode{
+        /*outline: 2px solid blue;*/
+        position: absolute;
+        top: 4.5em;
+        transition: all .6s;
+    }
+
+    .btn_dark_mode:hover{
+        cursor: pointer;
+    }
+
+
+}

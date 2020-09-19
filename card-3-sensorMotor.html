@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Motor > Código JS @hairton</title>
+
+    <!-- ESTILOS LINKS -->
+
+    <link rel="icon" href="img/iconPersonal.png">
+    <link rel="stylesheet" href="styles/generalStyle.css">
+    <link rel="stylesheet" href="styles/templateGrid.css">
+
+    <!-- GOOGLE FONTS -->
+
+    <!--TITULOS-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!--PARRAFOS-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!-- INTROS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!--ENLACES-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <!-- BLOCK HEADER -->
+
+    <header class="header">
+        <a href="index.html"><img class="header__image" src="img/cube2.png" alt="cubo one header"></a>
+        <h1 class="header__title-principal">Hairton M.</h1>
+    </header>
+
+    <!-- BLOCK DARK MODE -->
+
+    <div class="btn_dark_mode">Dark Mode</div>
+
+    <!-- BLOCK NAV -->
+
+    <nav class="main-menu">
+        <p class="main-menu__switch"><img src="img/icon_plus_menu.svg" alt="icon switch menu" class="main-menu__icon"></p>
+
+        <ul class="menu-principal">
+            <li class="menu-principal__item"><a class="menu-principal__link" href="index.html">Home</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="news.html">News</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="blog.html">Blog</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="proyects.html">Proyects</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="courses.html">Courses</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="info-author.html">Author</a></li>
+        </ul>  
+    </nav>
+
+    <div class="main-content">
+        <section class="section">
+            <article class="article">
+                <h3 class="article__title">Código con Node.js, Javascript y Johnny-five</h3>
+
+                <img class="article__img" src="img/icon_code_js.png" alt="image of js">
+
+                <span class="article__intro">
+                    En esta parte del proyecto vamos a utilizar <b class="font-bold">Node.js</b>, <b class="font-bold">JavaScript</b> y una <b class="font-bold">libreria open source</b> que nos permite usar arduino con JavaScript llamada <b class="font-bold">Johnny-Five</b>.
+                </span>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Empezemos, por usar <b class="font-bold">JavaScript</b>, para hacerlo solo necesitamos un editor de códigos para poder configurar y empezar y programar, pueden utilizar <b class="font-bold">notepad++, sublime Text</b>, en este proyecto usaremos <b class="font-bold">Visual Studio Code</b>. Pero si son de los que les gusta el proceso largo y duro, deberían usar <b class="font-bold">notepad (Bloc de notas)...📄</b>
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    1. Primero comenzemos a instalar <b class="font-bold">node.js</b>, la cual es tener a JavaScript fuera del Navegador. Asi que dirigete a este <b class="font-bold">link: <a href="https://nodejs.org/en/" target="_blank">https://nodejs.org/en/</a></b> y descarga la versión <b class="font-bold">LTS</b> de node.js ya que es la más estable. Después <b class="font-bold">ejecutan el archivo y lo instalan</b>. Ahora bien deben dirigirse a su <b class="font-bold">consola de comandos cmd.exe y escriben node -v</b> esto les mostrará la versión de <b class="font-bold">node.js</b>, y les asegurará que ya esta instalado.
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    2. Segundo vamos a instalar un <b class="font-bold">Gestor de paquetes de node.js</b> llamado <b class="font-bold">npm (node package manager)</b>, con este gestor podemos instalar librerias, framesworks y muchas cosas más para JavaScript, en este caso instalaremos <b class="font-bold">Johnny Five.</b>. Para ello debemos ir a nuestra <b>consola de comandos</b>, y escribir lo siguiente: <b class="font-bold"><mark>"npm install npm@latest -g"</mark></b>, con ello se instalara de manera global.
+                </p>
+
+                <img class="codes codes--bigDevice" src="img/code-npm-install.png" alt="code for show how install npm">
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    3. Tercero vamos a instalar <b class="font-bold">express</b> que nos permitirá usar todo el poder de <b class="font-bold">node.js</b>.
+                </p>
+
+                <img class="codes codes--bigDevice" src="img/code-install-express.png" alt="code for install express">
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    4. Cuarto vamos a instalar la libreria <b class="font-bold">open-source llamada Johnny-Five</b> para poder conectarnos con el hardware de <b class="font-bold">Arduino</b>. Para ello debemos dirigirnos a nuestra <b class="font-bold">consola de comandos</b>, y movernos hacia la carpeta en donde trabajaremos a continuación les mostraré:
+                </p>
+
+                <img class="codes codes--bigDevice" src="img/code-johnny-five-install.png" alt="code install Johnny-five">
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Una vez hecho aquello ya tenemos todo preparado en <b class="font-bold">Javascript</b>, ahora necesitamos descargar e instalar una libreria de <b class="font-bold">Arduino</b> que nos permita poder controlar el hardware desde JavaScript, esta libreria de arduino se llama <b class="font-bold">StandardFirmataPlus</b> para poder acceder a esta libreria necesitas descargar el <b class="font-bold">IDE</b> de Arduino en el siguiente <b class="font-bold">link: <a href="https://www.arduino.cc/en/main/software" target="_blank">https://www.arduino.cc/en/main/software</a>.</b>
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Una vez instalado y descargado el <b class="font-bold">IDE</b> de Arduino debes <b class="font-bold">verificar que el IDE</b> de arduino reconoce la placa. Observa la siguiente ruta.
+                </p>
+
+                <img class="codes codes--bigDevice" src="img/installBoarArduino.jpeg" alt="how install arduino">
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Debes tener en cuenta que en <b class="font-bold">Board</b> debe estar tú placa ya sea Arduino UNO, Leonardo o la que tengas y en el <b class="font-bold">Poart</b> debe estar el puerto configurado de Arduino.
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Luego de aquello debes seguir la siguiente ruta que se observa en la imagen y <b class="font-bold">cargar y subir a la placa arduino.</b>
+                </p>
+
+                <img class="codes codes--bigDevice" src="img/installFirmata.jpeg" alt="how install firmata arduino">
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Una vez realizado los pasos anteriores, es hora de <b class="font-bold">hechar código</b>, para ello te recomiendo <b class="font-bold">leer</b> la <b class="font-bold">Documentación de Johnny-five</b> visita el siguiente <b class="font-bold">link: <a href="http://johnny-five.io/api/" target="_blank">http://johnny-five.io/api/</a></b>
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Acontinuación podrás <b class="font-bold">descargar</b> el código completo, te recomiendo usar <b class="font-bold">Visual Studio Code</b> como editor de código.
+                </p>
+
+                <a href="img/code_js_motorSensor.png" class="button-link" download="codigo_JS.png">Download Image Code</a>
+                
+                <a href="sourceCode/codigo_js.js" class="button-link" download="codigo_JS.js">Download code JS</a>
+
+                <!--<img class="codes codes--bigDevice" src="img/code_js_motorSensor.png" alt="code js sensorMotor">-->
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Una vez ya tengas el código listo y escrito para probarlo, vamos a usar el siguiente comando en nuestro <b class="font-bold">cmd.exe</b> para correr el código.
+                </p>
+
+                <img  class="codes codes--bigDevice" src="img/execute_js_sensorMotor.png" alt="execute js">
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Y listo, ya tienes el hardware en Arduino y el código hecho en JavaScript. Lo siguiente es pasar el código hecho en <b class="font-bold">JavaScript a Arduino.</b>
+                </p>
+            </article>
+        </section>
+
+        <aside class="aside">
+
+        </aside>
+    </div>
+
+    <footer class="footer"> <!-- BLOCK footer -->
+        <span class="footer__copy-right">Copyright (c) 2020 por Hairton Mayhuay</span>
+
+        <div class="socialCode"> <!-- BLOCK socialCode -->
+                <h6 class="socialCode__title">Mi código</h6>
+
+                <a class="socialCode__codepen-link" href="https://codepen.io/dashboard/" target="_blank" class="codepen">codepen.io</a>
+                    
+                <a class="socialCode__jsFiddle-link" href="https://jsfiddle.net/user/fiddles/all/" target="_blank" class="jsfiddle">JSFiddle</a>
+        </div>
+
+        <div class="socialNetworks"> <!-- BLOCK socialNetworks -->
+            <h6 class="socialNetworks__title">Redes Sociales</h6>
+
+            <div class="iconsSocialNetworks"> <!-- BLOCK iconsSocialNetworks-->
+                <a href="#" target="_blank" class="iconsSocialNetworks__item"><img src="img/linkedin.png" alt="icon linkedin" class="iconsSocialNetworks__image iconLinkeding"></a>
+
+                <a href="#"class="iconsSocialNetworks__item"><img src="img/youtube.png" alt="icon youtube" class="iconsSocialNetworks__image iconYoutube"></a>
+
+                <a href="#" class="iconsSocialNetworks__item" ><img src="
+                    img/facebook.png" alt="icon facebook" class="iconsSocialNetworks__image iconFacebook"></a>
+
+                <a href="#" class="iconsSocialNetworks__item"><img src="img/twitter.png" alt="icon twitter" class="iconsSocialNetworks__image iconTwitter"></a>
+
+                <a href="#" class="iconsSocialNetworks__item"><img src="img/instagram.png" alt="icon instagram" class="iconsSocialNetworks__image iconImstagram"></a>
+
+                <a href="#" class="iconsSocialNetworks__item"><img src="img/whatsapp.png" alt="icon whatsapp" class="iconsSocialNetworks__image iconWhatsapp"></a>
+            </div>
+
+            <div class="main-modal">
+                <div class="modal-box">
+                    <h1 class="modal-box__title"></h1>
+                    <img src="" alt="my Photo" class="modal-box__img">
+                    <p class="modal-box__desc"></p>
+                    <span class="modal-box__close">&times;</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="go-up"></div>
+    </footer>
+
+    <script src="script/menu.js"></script>
+    <script src="script/modalBox.js"></script>
+    <script src="script/go-to-up.js"></script>
+    <script src="script/darkMode.js"></script>
+</body>
+</html>

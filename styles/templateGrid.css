@@ -1,0 +1,53 @@
+/*
+     Esta hoja de estilos esta diseñada para poder usar un sistema para templates para páginas web llamada CSS grid Layout
+*/
+
+
+/* ------------------- MEDIA QUERIES ------------------- */
+
+/* 
+    UTILIZANDO MEDIA QUERIES PARA PODER HACER UN BREAKPOINT EN MI WEBSITE
+*/
+
+/* breakpoint para tablets */
+
+@media screen and (min-width: 768px){
+    
+    .main-content{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        margin: 0;
+    }
+
+    .section{
+        /*outline: 2px solid red;*/
+        grid-column: 1 / 8;
+        grid-row: 1;
+    }
+
+    .aside{
+        /*outline: 2px solid blue;*/
+        grid-column: 8 / 13; 
+        grid-row: 1;
+    }
+}
+
+/* breakpoint para Laptops y PC's */
+
+@media screen and (min-width: 1024px){
+    
+    .main-content{
+        grid-template-rows: auto auto;
+    }
+
+    .section{
+        grid-column: 1 / 13;
+        grid-row: 1;
+    }
+
+    .aside{
+        grid-column: 1 / 13;
+        grid-row: 2;
+    }
+}

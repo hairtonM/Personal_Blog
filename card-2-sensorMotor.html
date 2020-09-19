@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Motor > Prototipado Arduino @hairton</title>
+
+    <!-- ESTILOS LINKS -->
+
+    <link rel="icon" href="img/iconPersonal.png">
+    <link rel="stylesheet" href="styles/generalStyle.css">
+    <link rel="stylesheet" href="styles/templateGrid.css">
+
+    <!-- GOOGLE FONTS -->
+
+    <!--TITULOS-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!--PARRAFOS-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!-- INTROS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!--ENLACES-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <!-- BLOCK HEADER -->
+
+    <header class="header">
+        <a href="index.html"><img class="header__image" src="img/cube2.png" alt="cubo one header"></a>
+        <h1 class="header__title-principal">Hairton M.</h1>
+    </header>
+
+    <!-- BLOCK DARK MODE -->
+
+    <div class="btn_dark_mode">Dark Mode</div>
+
+    <!-- BLOCK NAV -->
+
+    <nav class="main-menu">
+        <p class="main-menu__switch"><img src="img/icon_plus_menu.svg" alt="icon switch menu" class="main-menu__icon"></p>
+
+        <ul class="menu-principal">
+            <li class="menu-principal__item"><a class="menu-principal__link" href="index.html">Home</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="news.html">News</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="blog.html">Blog</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="proyects.html">Proyects</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="courses.html">Courses</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="info-author.html">Author</a></li>
+        </ul>  
+    </nav>
+
+    <div class="main-content">
+        <section class="section">
+            <article class="article">
+                <h3 class="article__title">Prototipado con Arduino</h3>
+
+                <img class="article__img" src="img/img-sensorMotor.jpeg" alt="prototype sensor Motor">
+
+                <span class="article__intro">
+                    En esta parte del Proyecto Sensor Motor les mostraré las conexiones e implementos del hardware Arduino. 
+                </span>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    El hardware utilizado para poder realizar el proyecto <b class="font-bold">Sensor Motor</b> fue le siguiente: 
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    <b class="font-bold">Placa Arduino UNO, Protoboard, Focos LED, resistencias de 100 Ohmios, Sensor ultrasónico, Modúlo Relay y Cables Jumpers.</b>
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Todos los implementos mencionados anterioremente son del hardware proporcionado por Arduino.
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Asi que empezemos. Primero vamos a ver como podemos conectar el Sensor de Distancia Ultrasónico, el cual nos permitira medir la distancia que hay entre el sensor y el agua. Este sensor emite un sonido mediante un pin llamado <b class="font-bold">trigger</b> el cual emite el pulso que permitira medir la distancia, y lo recibira un pin llamado <b class="font-bold">echo</b> que calculará la distancia que hay entre el sensor y el agua. 
+                </p>
+
+                <img class="article__img--total article__img--bigDevice"" src="img/sensorMotorParte1.png" alt="photo sensor ultrasonic">
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Ahora para la instalación de los <b class="font-bold">leds</b> los cuales me permitirán saber el nivel del agua. El <b class="font-bold">LED rojo</b>, me indica que el nivel del agua en el cilindro esta bajo y no debe encender el Motor. El <b class="font-bold">LED naranja / amarillo</b>, me indica que el nivel del agua esta por la mitad y que pronto encenderá el Motor. Por último el <b class="font-bold">LED verde</b>, me indica que el nivel del agua esta al tope y que procederá a <b class="font-bold">enceder el Motor</b>.
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Las resistencias utilizadas son de 100 Ohmios.
+                </p>
+
+                <img class="article__img--total article__img--bigDevice"" src="img/sensorMotorParte2.png" alt="photo leds arduino">
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Ahora bien pasaremos al diagrama del <b class="font-bold">Modúlo Relay</b> que se conectará con Arduino para permitirnos manejar una corriente de <b class="font-bold">200 voltios</b> a una de <b>5 voltios</b>, el cual es el voltaje que maneja la placa Arduino. Aunque si bien es cierto puede soportar hasta <b class="font-bold">20 voltios</b>, pero seria sobrecargarlo y el Motor no funcionaria con tan bajo voltaje.
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    El <b class="font-bold">Modúlo Relay</b> cuenta con 3 pines, el primer pin es el que nos permite conectarlo a un puerto de entrada del arduino que le enviará las señales para que permita la continuidad de la corriente o no.
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    El segundo pin va conectado al puerto positivo <b class="font-bold">5v</b> del arduino y el tercer pin al puerto negativo <b class="font-bold">GND (ground)</b>.
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Como se puede apreciar en el diagrama este enciende un foco, sin embargo reemplazaremos el foco por el Motor de Agua y la pila de 9v con una corriente alterna de 220v. Para lograr aquello debemos tener en cuenta la salidas del <b class="font-bold">Modúlo Relay</b>. 
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    El pin al que estará conectado será el <b class="font-bold">pin número 7</b>.
+                </p>
+
+                <img class="article__img--total article__img--bigDevice"" src="img/sensorMotorParte3.webp" alt="photo relay arduino">
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Ahora la instalación de los leds y del Sensor Ultrasónico será de esta manera. Para acoplar el el Modúlo Relay solo será necesario seguir el diagrama antes visto, soló que debe ser el pin número 7 de arduino. 
+                </p>
+
+                <img class="article__img--total article__img--bigDevice" src="img/sensorMotorParte4.png" alt="photo sensor ultrasonic & leds">
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Por ultimo, las instalaciones del sensor ultrasonic, los Leds y el Modúlo Relay estarán unidos en un solo esquema. Sin embargo aún no estará listo ya que nos faltaría, darle vida con el <b class="font-bold">código.</b>
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    <b class="font-bold">Ahora bien al ir al código les recomiendo usar primero el Modúlo Relay con un foco, para hacer pruebas, después de ello solo reemplazaremos el foco por el Motor de Agua.</b>
+                </p>
+            </div>
+        </section>
+
+        <aside class="aside">
+
+        </aside>
+    </div>
+
+    <footer class="footer"> <!-- BLOCK footer -->
+        <span class="footer__copy-right">Copyright (c) 2020 por Hairton Mayhuay</span>
+
+        <div class="socialCode"> <!-- BLOCK socialCode -->
+                <h6 class="socialCode__title">Mi código</h6>
+
+                <a class="socialCode__codepen-link" href="https://codepen.io/dashboard/" target="_blank" class="codepen">codepen.io</a>
+                <a class="socialCode__jsFiddle-link" href="https://jsfiddle.net/user/fiddles/all/" target="_blank" class="jsfiddle">JSFiddle</a>
+        </div>
+
+        <div class="socialNetworks"> <!-- BLOCK socialNetworks -->
+            <h6 class="socialNetworks__title">Redes Sociales</h6>
+
+            <div class="iconsSocialNetworks"> <!-- BLOCK iconsSocialNetworks-->
+                <a href="#" target="_blank" class="iconsSocialNetworks__item"><img src="img/linkedin.png" alt="icon linkedin" class="iconsSocialNetworks__image"></a>
+
+                <a href="https://www.youtube.com/channel/UCDT1DvPPMn2Gk6Nc1EH74Qw?view_as=subscriber" target="_blank" class="iconsSocialNetworks__item"><img src="img/youtube.png" alt="icon youtube" class="iconsSocialNetworks__image"></a>
+
+                <a href="https://www.facebook.com/hairtonM.Web?ref=bookmarks" target="_blank" class="iconsSocialNetworks__item" ><img src="img/facebook.png" alt="icon facebook" class="iconsSocialNetworks__image"></a>
+
+                <a href="#" target="_blank" class="iconsSocialNetworks__item"><img src="img/twitter.png" alt="icon twitter" class="iconsSocialNetworks__image"></a>
+
+                <a href="#" target="_blank" class="iconsSocialNetworks__item"><img src="img/instagram.png" alt="icon instagram" class="iconsSocialNetworks__image"></a>
+
+                <a href="https://api.whatsapp.com/send?phone=51920803441&text=Hola! Mucho gusto%20quisiera%20contactarte" target="_blank" class="iconsSocialNetworks__item"><img src="img/whatsapp.png" alt="icon whatsapp" class="iconsSocialNetworks__image"></a>
+            </div>
+        </div>
+
+        <div class="go-up"></div>
+    </footer>
+
+    
+    <script src="script/menu.js"></script>
+    <script src="script/go-to-up.js"></script>
+    <script src="script/darkMode.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS & HTML @hairton</title>
+
+    <!-- ESTILOS LINKS -->
+
+    <link rel="icon" href="img/iconPersonal.png">
+    <link rel="stylesheet" href="styles/generalStyle.css">
+    <link rel="stylesheet" href="styles/templateGrid.css">
+
+    <!-- GOOGLE FONTS -->
+
+    <!--TITULOS-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!--PARRAFOS-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!-- INTROS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!--ENLACES-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <!-- BLOCK HEADER -->
+
+    <header class="header">
+        <a href="index.html"><img class="header__image" src="img/cube2.png" alt="cubo one header"></a>
+        <h1 class="header__title-principal">Hairton M.</h1>
+    </header>
+
+    <!-- BLOCK DARK MODE -->
+
+    <div class="btn_dark_mode">Dark Mode</div>
+
+    <!-- BLOCK NAV -->
+
+    <nav class="main-menu">
+        <p class="main-menu__switch"><img src="img/icon_plus_menu.svg" alt="icon switch menu" class="main-menu__icon"></p>
+
+        <ul class="menu-principal">
+            <li class="menu-principal__item"><a class="menu-principal__link" href="index.html">Home</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="news.html">News</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="blog.html">Blog</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="proyects.html">Proyects</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="courses.html">Courses</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="info-author.html">Author</a></li>
+        </ul>  
+    </nav>
+
+    <div class="main-content">
+        <section class="section">
+            <article class="article">
+                <h3 class="article__title">CSS en HTML</h3>
+                
+                <span class="article__intro">
+                    En esta sección vamos a hablar sobre las formas que hay para usar CSS en la estructuración de nuestra website con HTML y analizaremos <b class="font-bold">¿Cuál es la mejor?.</b>
+                </span>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    La razón por la que usamos <b class="font-bold">CSS en HTML</b>, es para hacer nuestra website mucho más visible y con mayor diseño y presencia, en pocas palabras para <b class="font-bold">que se vea lindo.</b>
+                </p>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Primera forma <b class="font-bold">"Usar CSS dentro de las etiquetas de HTML"</b>, esto era muy común en los inicios de la web sin embargo es poco ventajoso al momento de querer reutilizar algunos estilos. Como pueden visualizar en el siguiente ejemplo en donde se hace dificil leer el código.
+                </p>
+
+                <img src="img/first-form-css-html.png" alt="first code html and css" class="codes codes--bigDevice">
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Segunda forma <b class="font-bold">"Usar CSS dentro de la etiqueta head con la etiqueta style"</b>, esta forma presenta una mayor funcionalidad y mantenibilidad del código css ya que nos mezclamos <b class="font-bold">CSS</b>, dentro de cada etiqueta <b class="font-bold">HTML</b>, ahora lo que se busca es colocar todos los estilos dentro de la etiqueta <b class="font-bold">style</b>, y esta etiqueta que contiene todos los estilos estara dentro de la etiqueta <b class="font-bold">head</b>, donde estan los metadatos, observa el siguiente ejemplo.
+                </p>
+
+                <img src="img/second-code-html-css.png" alt="second code html and CSS" class="codes codes--bigDevice">
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    Tercera forma <b class="font-bold">"Usar CSS en un nuevo archivo con extensión .css y usando la etiqueta link"</b>, la etiqueta link nos permitirá unir HTML con un documento con extensión .css <b class="font-bold">esto es lo más recomendable según</b> "MDN MOZILA FOUNDATION".
+                </p>
+
+                <img src="img/code-html-link.png" alt="code html with css (link)" class="codes codes--bigDevice">
+                
+                <p class="paragraph paragraph--section-bigDevice">
+                    Ahora bien ahora creamos un archivo con extesión css
+                </p>
+
+                <img src="img/code-css-file.png" alt="code css" class="codes codes--bigDevice">
+            </article>    
+        </section>
+
+
+        <aside class="aside">
+            
+        </aside>
+    </div>
+
+
+    <footer class="footer"> <!-- BLOCK footer -->
+        <span class="footer__copy-right">Copyright (c) 2020 por Hairton Mayhuay</span>
+
+        <div class="socialCode"> <!-- BLOCK socialCode -->
+                <h6 class="socialCode__title">Mi código</h6>
+
+                <a class="socialCode__codepen-link" href="https://codepen.io/dashboard/" target="_blank" class="codepen">codepen.io</a>
+                    
+                <a class="socialCode__jsFiddle-link" href="https://jsfiddle.net/user/fiddles/all/" target="_blank" class="jsfiddle">JSFiddle</a>
+        </div>
+
+        <div class="socialNetworks"> <!-- BLOCK socialNetworks -->
+            <h6 class="socialNetworks__title">Redes Sociales</h6>
+
+            <div class="iconsSocialNetworks"> <!-- BLOCK iconsSocialNetworks-->
+                <a href="#" target="_blank" class="iconsSocialNetworks__item"><img src="img/linkedin.png" alt="icon linkedin" class="iconsSocialNetworks__image iconLinkeding"></a>
+
+                <a href="#"class="iconsSocialNetworks__item"><img src="img/youtube.png" alt="icon youtube" class="iconsSocialNetworks__image iconYoutube"></a>
+
+                <a href="#" class="iconsSocialNetworks__item" ><img src="
+                    img/facebook.png" alt="icon facebook" class="iconsSocialNetworks__image iconFacebook"></a>
+
+                <a href="#" class="iconsSocialNetworks__item"><img src="img/twitter.png" alt="icon twitter" class="iconsSocialNetworks__image iconTwitter"></a>
+
+                <a href="#" class="iconsSocialNetworks__item"><img src="img/instagram.png" alt="icon instagram" class="iconsSocialNetworks__image iconImstagram"></a>
+
+                <a href="#" class="iconsSocialNetworks__item"><img src="img/whatsapp.png" alt="icon whatsapp" class="iconsSocialNetworks__image iconWhatsapp"></a>
+            </div>
+
+            <div class="main-modal">
+                <div class="modal-box">
+                    <h1 class="modal-box__title"></h1>
+                    <img src="" alt="my Photo" class="modal-box__img">
+                    <p class="modal-box__desc"></p>
+                    <span class="modal-box__close">&times;</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="go-up"></div>
+    </footer>
+    
+    <script src="script/menu.js"></script>
+    <script src="script/modalBox.js"></script>
+    <script src="script/go-to-up.js"></script>
+    <script src="script/darkMode.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course CSS > @hairton</title>
+
+    <!-- ESTILOS LINKS -->
+
+    <link rel="icon" href="img/iconPersonal.png">
+    <link rel="stylesheet" href="styles/generalStyle.css">
+    <link rel="stylesheet" href="styles/templateGrid.css">
+
+    <!-- GOOGLE FONTS -->
+
+    <!--TITULOS-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!--PARRAFOS-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!-- INTROS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!--ENLACES-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <!-- BLOCK HEADER -->
+
+    <header class="header">
+        <a href="index.html"><img class="header__image" src="img/cube2.png" alt="cubo one header"></a>
+        <h1 class="header__title-principal">Hairton M.</h1>
+    </header>   
+    
+    <!-- BLOCK DARK MODE -->
+
+    <div class="btn_dark_mode">Dark Mode</div>
+
+    <!-- BLOCK NAV -->
+
+    <nav class="main-menu">
+        <p class="main-menu__switch"><img src="img/icon_plus_menu.svg" alt="icon switch menu" class="main-menu__icon"></p>
+
+        <ul class="menu-principal">
+            <li class="menu-principal__item"><a class="menu-principal__link" href="index.html">Home</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="news.html">News</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="blog.html">Blog</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="proyects.html">Proyects</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="courses.html">Courses</a></li>
+            <li class="menu-principal__item"><a class="menu-principal__link" href="info-author.html">Author</a></li>
+        </ul>  
+    </nav>
+
+    
+    <div class="main-content">
+        <section class="section">
+            <article class="article">
+                <h3 class="article__title">CURSO DE CSS3</h3>
+
+                <span class="article__intro">
+                    Este curso esta enfocado a ofrecer una de las bases para el desarrollo de páginas Web, con <b class="font-bold">CSS</b>, podrás hacer que tú web tenga más presencia visual.
+                </span>
+
+                <p class="paragraph paragraph--section-bigDevice">
+                    A continuación se muestra una seria de <b class="font-bold">cards</b> que te llevarán hacia los fundamentos del diseño web. Te recomiendo empezar primero por <b class="font-bold">HTML</b> para luego seguir con CSS.
+                </p>
+
+                <div class="content-cards">
+                    <div class="cards">
+                        <img class="cards__img" src="img/whats-css3.png" alt="icon css">
+                        <a href="card-1-css3.html" class="cards__title">¿Qué es CSS?</a>
+                        <p class="cards__description">
+                            CSS es un lenguaje de estilos que nos permite otorgar creatividad y diseños personalizados en nuestra website.
+                        </p>
+                    </div>
+
+                    <div class="cards">
+                        <img class="cards__img" src="img/html_css.png" alt="html and css">
+                        <a href="card-2-css3.html" class="cards__title">Formas De Usar CSS En HTML</a>
+                        <p class="cards__description">
+                            Existen muchas formas de usar <b class="font-bold">CSS</b> en nuestra Website podemos colocarlo en el <b class="font-bold">head</b> utilizando la etiqueta <b class="font-bold">"link"</b>
+                        </p>
+                    </div>
+
+                    <div class="cards">
+                        <img class="cards__img" src="img/selectros_css.png" alt="selectors css">
+                        <a href="card-3-css3.html" class="cards__title">Selectores en CSS</a>
+                        <p class="cards__description">
+                            En CSS existen un conjunto de formas para referenciar a los elementos HTML, usando <b class="font-bold">selectores</b>.
+                        </p>
+                    </div>
+
+                    <!--<div class="cards">
+                        <img class="cards__img" src="img/class_css.png" alt="class en css">
+                        <a href="#" class="cards__title">Clases en CSS</a>
+                        <p class="cards__description">
+                            Las clases en CSS nos permiten poder otorgarle estios a mas de un elemento en HTML y lo mejor de todo puede ser personalizado y reutilizable.
+                        </p>
+                    </div>-->
+                </div>
+            </article>
+        </section>
+
+        <aside class="aside">
+            <div class="aside-info"> <!-- BLOCK aside-info -->
+                <h4 class="aside-info__title">Variables en CSS</h4>
+
+                <img src="img/variable_css.png" alt="variables in css" class="aside-info__img">
+
+                <p class="paragraph paragraph--aside">
+                    En <b class="font-bold font-bold--aside">CSS3</b> ahora se pueden usar variables que pueden guardar y almacenar valores. Las variables se declaran mediante la palabra clave <b class="font-bold font-bold--aside">:root{ /*------- variables -------*/}</b> como por ejemplo en el siguiente código <a class="aside-info__link" href="blog.html#varCSS-info-blog">Go</a>
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer"> <!-- BLOCK footer -->
+        <span class="footer__copy-right">Copyright (c) 2020 por Hairton Mayhuay</span>
+
+        <div class="socialCode"> <!-- BLOCK socialCode -->
+                <h6 class="socialCode__title">Mi código</h6>
+
+                <a class="socialCode__codepen-link" href="https://codepen.io/dashboard/" target="_blank" class="codepen">codepen.io</a>
+                    
+                <a class="socialCode__jsFiddle-link" href="https://jsfiddle.net/user/fiddles/all/" target="_blank" class="jsfiddle">JSFiddle</a>
+        </div>
+
+        <div class="socialNetworks"> <!-- BLOCK socialNetworks -->
+            <h6 class="socialNetworks__title">Redes Sociales</h6>
+
+            <div class="iconsSocialNetworks"> <!-- BLOCK iconsSocialNetworks-->
+                <a href="#" target="_blank" class="iconsSocialNetworks__item"><img src="img/linkedin.png" alt="icon linkedin" class="iconsSocialNetworks__image iconLinkeding"></a>
+
+                <a href="#"class="iconsSocialNetworks__item"><img src="img/youtube.png" alt="icon youtube" class="iconsSocialNetworks__image iconYoutube"></a>
+
+                <a href="#" class="iconsSocialNetworks__item" ><img src="
+                    img/facebook.png" alt="icon facebook" class="iconsSocialNetworks__image iconFacebook"></a>
+
+                <a href="#" class="iconsSocialNetworks__item"><img src="img/twitter.png" alt="icon twitter" class="iconsSocialNetworks__image iconTwitter"></a>
+
+                <a href="#" class="iconsSocialNetworks__item"><img src="img/instagram.png" alt="icon instagram" class="iconsSocialNetworks__image iconImstagram"></a>
+
+                <a href="#" class="iconsSocialNetworks__item"><img src="img/whatsapp.png" alt="icon whatsapp" class="iconsSocialNetworks__image iconWhatsapp"></a>
+            </div>
+
+            <div class="main-modal">
+                <div class="modal-box">
+                    <h1 class="modal-box__title"></h1>
+                    <img src="" alt="my Photo" class="modal-box__img">
+                    <p class="modal-box__desc"></p>
+                    <span class="modal-box__close">&times;</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="go-up"></div>
+    </footer>
+
+    <script src="script/menu.js"></script>
+    <script src="script/modalBox.js"></script>
+    <script src="script/go-to-up.js"></script>
+    <script src="script/darkMode.js"></script>
+</body>
+</html>
