@@ -715,9 +715,13 @@ body{
 }
 
 .iconsSocialNetworks__image{
+    /*outline: 2px solid blue;*/
     flex: 1;
-    width: 1.75em;
-    height: auto;
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    /*background-color: #ddd;*/
+    border-radius: 0.5em;
 }
 
 /* ESTILOS PARA EL CUADRO DE DIALOGO QUE SE MOSTRARA CUANDO EL USUARIO PRESIONE LOS ICONOS DE SOCIAL MEDIA */
