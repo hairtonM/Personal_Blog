@@ -550,14 +550,14 @@ body{
 /* ESTILOS PARA EL LOS ARTICLE REVIEWS */
 
 .article-card{
-    outline: 2px solid blue;
+    /*outline: 2px solid blue;*/
     display: grid;
     width: 17em;
     height: auto;
     margin: 3em auto;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 1em 1em 1em 1em;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 .article-card__img{
@@ -577,12 +577,13 @@ body{
 }
 
 .info-card__title{
-    outline: 2px solid black;
+    /*outline: 2px solid black;*/
     font-size: 1.3em;
     line-height: 1.4em;
-    padding: 0.8em 0.2em 0.25em 0.5em;
+    padding: 0.8em 0.3em 0.2em 0.5em;
     margin: 0;
     color:  rgba(66,103,178, 0.85);
+    font-family: var(--fontFamilyTitulos);
 }
 
 .info-card__desc{
@@ -590,18 +591,21 @@ body{
     display: block;
     width: 100%;
     height: auto;
-    font-size: 0.85em;
+    font-size: 0.88em;
     line-height: 1.6em;
     color: rgba(0, 0, 0, 0.56);
     font-weight: 600;
-    margin: 0.7em 0 0.25em 0;
+    margin: 0.5em 0 2em 0;
     padding: 0 0.5em 0 0.8em;
+    font-family: var(--fontFamilyParrafos);
 }
 
 /* styles info-autor */
 
 .info-autor{
-    outline: 2px solid purple;
+    /*outline: 2px solid purple;*/
+    width: 100%;
+    height: auto;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -611,47 +615,59 @@ body{
 }
 
 .info-autor__img{
-    outline: 2px solid black;
-    flex: 1 10%;
-    width: 2em;
-    height: 2em;
+    /*outline: 2px solid black;*/
+    flex: 1 15%;
+    width: 100%;
+    height: auto;
+    padding: 0.07em;
+    margin: 0;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .autor-date{
-    flex: 1 80%;
+    flex: 1 75%;
 }
 
 .info-autor__icon{
-    outline: 2px solid black;
+    /*outline: 2px solid black;*/
     flex: 1 10%;
-    width: 2em;
-    height: 2em;
+    width: 100%;
+    height: 1.5em;
+    padding: 0 0.7em 0 0;
+    margin: 0;
+}
+
+.info-autor__icon:active{
+    transform: scale(0.75);
 }
 
 /* estilos para autor-date */ 
 
 .autor-date{
-    outline: 2px solid red;
+    /*outline: 2px solid red;*/
     margin: 0;
     padding: 0;
 }
 
 .autor-date__title{
-    outline: 2px solid gray;
+    /*outline: 2px solid gray;*/
     display: block;
     width: 100%;
     margin: 0;
-    font-size: 0.95em;
+    font-size: 0.80em;
     font-weight: 600;
     padding: 0.2em 0 0.35em 0.5em;
+    font-family: var(--fontFamilyTitulos);
 }
 
 .autor-date__full-date{
-    outline: 2px solid blue;
+    /*outline: 2px solid blue;*/
     display: block;
     width: 100%;
     padding: 0.25em 0 0.35em 0.56em;
     font-size: 0.76em;
+    font-family: var(--fontFamilyIntros);
 }
 
 /* *********************** ESTILOS PARA EL ASIDE EN MOBILES ***********************  */
@@ -1086,6 +1102,21 @@ body{
         margin: 0;
     }
 
+    .blog-info__title{
+        /*outline: 2px solid red;*/
+        background-color: rgba(0, 0, 0, 0.65);
+        padding: 0.25em;
+    }
+
+    /* ESTILOS PARA EL LOS ARTICLE REVIEWS */
+
+    .article-card{
+        /*outline: 2px solid red;*/
+        width: 24em;
+        margin: 2em auto 3em auto;
+
+    }
+
     /* ***************************** ESTILOS PARA EL ASIDE EN TABLETS ***************************** */
 
     .aside{
@@ -1383,6 +1414,69 @@ body{
     .blog-info__autor{
         width: 25%;
         margin: 0 auto;
+    }
+
+    
+    /* ESTILOS PARA EL LOS ARTICLE REVIEWS */
+
+    .article-card{
+        /*outline: 2px solid green;*/
+        width: 50em;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        margin: 6em auto 8em auto;
+    }
+
+    .article-card__img{
+        grid-column: 1;
+        grid-row: 1 / 3;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1em 0 0 1em;
+    }
+
+    /* styles info-card */
+
+    .info-card{
+        /*outline: 2px solid blue;*/
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .info-card__title{
+        margin: 0;
+        padding-left: 1em;
+    }
+
+    .info-card__desc{
+        padding: 0 0.25em 0 1.6em;
+    }
+
+    /* styles info-autor */
+
+    .info-autor{
+        /*outline: 2px solid blue;*/
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .info-autor__img{
+        padding-left: 0.5em;
+    }
+
+    .info-autor__icon:hover{
+        cursor: pointer;
+        transform: scale(0.75);
+    }
+
+    /* styles for autor-date */
+
+    .autor-date__full-date{
+        font-weight: 600;
+        color: rgba(72, 72, 71, 1);
     }
 
     /* ***************************** ESTILOS PARA EL ASIDE EN LAPTOPS Y COMPUTADORAS ***************************** */
