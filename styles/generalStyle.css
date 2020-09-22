@@ -555,7 +555,7 @@ body{
     width: 17em;
     height: auto;
     margin: 3em auto;
-    background-color: rgba(0, 0, 0, 0.13);
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 1em 1em 1em 1em;
     /*overflow: hidden;*/
 }
@@ -569,7 +569,7 @@ body{
 }
 
 .info-card{
-    outline: 2px solid red;
+    /*outline: 2px solid red;*/
     display: block;
     width: 100%;
     margin: 0;
@@ -580,9 +580,78 @@ body{
     outline: 2px solid black;
     font-size: 1.3em;
     line-height: 1.4em;
-    padding: 0.2em 0.2em 0.5em 0.5em;
+    padding: 0.8em 0.2em 0.25em 0.5em;
     margin: 0;
-    color: steelblue;
+    color:  rgba(66,103,178, 0.85);
+}
+
+.info-card__desc{
+    /*outline: 2px solid green;*/
+    display: block;
+    width: 100%;
+    height: auto;
+    font-size: 0.85em;
+    line-height: 1.6em;
+    color: rgba(0, 0, 0, 0.56);
+    font-weight: 600;
+    margin: 0.7em 0 0.25em 0;
+    padding: 0 0.5em 0 0.8em;
+}
+
+/* styles info-autor */
+
+.info-autor{
+    outline: 2px solid purple;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.info-autor__img{
+    outline: 2px solid black;
+    flex: 1 10%;
+    width: 2em;
+    height: 2em;
+}
+
+.autor-date{
+    flex: 1 80%;
+}
+
+.info-autor__icon{
+    outline: 2px solid black;
+    flex: 1 10%;
+    width: 2em;
+    height: 2em;
+}
+
+/* estilos para autor-date */ 
+
+.autor-date{
+    outline: 2px solid red;
+    margin: 0;
+    padding: 0;
+}
+
+.autor-date__title{
+    outline: 2px solid gray;
+    display: block;
+    width: 100%;
+    margin: 0;
+    font-size: 0.95em;
+    font-weight: 600;
+    padding: 0.2em 0 0.35em 0.5em;
+}
+
+.autor-date__full-date{
+    outline: 2px solid blue;
+    display: block;
+    width: 100%;
+    padding: 0.25em 0 0.35em 0.56em;
+    font-size: 0.76em;
 }
 
 /* *********************** ESTILOS PARA EL ASIDE EN MOBILES ***********************  */
