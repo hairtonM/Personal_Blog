@@ -7,6 +7,7 @@
 body{
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 /* variables para mi website */
@@ -19,17 +20,17 @@ body{
     --size_h2: 2.70em;
     --size_h3: 2.55em;
     --size_h4: 2em;
+    --size_titlePanelAcordion: 1.75em;
     --size_h5: 1.65em;
     --size_h6: 1.55em;
-    --size_p: 1.40em;
+    --size_cardsTitle: 1.30em;
     --size_span: 1.22em;
     --size_a: 1.20em;
-    --size_fontBold: 0.85em;
-    --size_cardsTitle: 1.30em;
-    --size_cardsDescription: 1.15em;
-    --size_titlePanelAcordion: 1.75em;
+    --size_p: 1.18em;
     --size_asideInfoLink: 1.17em;
+    --size_cardsDescription: 1.15em;
     --size_paragraphAside: 1.10em;
+    --size_fontBold: 0.85em;
 
     /* font-family */
 
@@ -526,11 +527,13 @@ body{
     display: block;
     width: 100%;
     margin: 0;
-    padding: 0.5em 0.2em;
+    padding: 0;
     text-align: center;
+    line-height: 1.6em;
     color: var(--colorEEE);
     font-family: var(--fontFamilyTitulos);
-    background-color: var(--backColorHeader);
+    font-size: calc(var(--size_h3) - 1.2em);
+    /*background-color: var(--backColorHeader);*/
 }
 
 .blog-info__autor{
@@ -543,8 +546,7 @@ body{
     margin: 2em 0;
     text-align: center;
     font-family: "Roboto", "Verdana", sans-serif;
-    box-shadow: 0 4px 10px  rgba(0, 0, 0, 0.26);
-    border-radius: 1em;
+    box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.26);
 }
 
 /* ESTILOS PARA EL LOS ARTICLE REVIEWS */
@@ -872,32 +874,44 @@ body{
     /*outline: 2px solid red;*/
     position: relative;
     bottom: 4.5em;
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
     width: 90%;
+    height: auto;
     margin: 1em;
     background-color: var(--backColorHeader);
     z-index: 60;
 }
 
 .modal-box__title{
+    /*outline: 2px solid blue;*/
+    grid-column: 2;
+    grid-row: 1;
     color: var(--colorEEE);
-    font-size: var(--size_h5);
+    font-size: var(--size_h6);
     text-align: center;
     margin: 0;
-    padding: 0.25em 0.1em;
+    padding: 0.5em 0.5em 0 0;
 }
 
 .modal-box__img{
+    /*outline: 2px solid green;*/
+    grid-column: 1;
+    grid-row: 1 / 3;
     display: block;
-    width: 4.7em; 
-    height: 4.7em;
+    width: 100%; 
+    height: 100%;
     margin: 0 auto;
 }
 
 .modal-box__desc{
+    /*outline: 2px solid purple;*/
+    grid-column: 2;
+    grid-row: 2;
     color: var(--colorDDD);
     line-height: 1.6em;
-    font-size: 1.05em;
+    font-size: 0.95em;
     padding: 0.30em 0.8em;
     margin: 0;
 }
@@ -914,11 +928,14 @@ body{
 }
 
 .modal-box__close{
-    color: var(--colorDDD);
-    font-size: 1.3em;
+    /*outline: 2px solid blue;*/
     position: absolute;
     top: 0;
     right: 0.25em;
+    color: var(--colorDDD);
+    font-size: 1.45em;
+    margin: 0;
+    padding: 0;
 }
 
 /* ESTILOS PARA EL IR-ARRIBA */
@@ -969,16 +986,12 @@ body{
 
 /* ESTILOS para el botón que acciona el Dark Mode */
 
-body{
-    position: relative;
-}
-
 .btn_dark_mode{
     /*outline: 2px solid blue;*/
     position: absolute;
     display: block;
     width: 10em;
-    top: 9em;
+    top: 8.5em;
     right: 0.7em;
     line-height: 2em;
     text-align: center;
@@ -1010,14 +1023,13 @@ body{
 .darkmode .article__intro{
     /*outline: 2px solid white;*/
     color: white;
-    border: 0.5px solid #ddd;
-    box-shadow: 0 2px 7px rgba(255, 255, 255, 0.26);
+    border: 0.25px solid #ccc;
+    box-shadow: 4px 2px 7px rgba(255, 255, 255, 0.16);
 }
 
 .darkmode .font-bold{
     color: #fff;
 }
-
 
 .darkmode .paragraph{
     color: rgba(255, 255, 255, 0.56);
@@ -1030,6 +1042,31 @@ body{
 .darkmode .blog-info__autor{
     color: rgba(179, 173, 173, 0.842);
     border-radius: 0;
+}
+
+/* estilos para el article review cuando se hace un .darkmode */
+
+.darkmode .article-card{
+    border: 0.05px solid #ccc;
+}
+
+.darkmode .info-card__title{
+    color: rgba(35, 151, 219, 1);
+}
+
+.darkmode .info-card__desc{
+    color: rgba(255, 255, 255, 0.56);
+}
+
+.darkmode .autor-date__title{
+    color: rgba(0, 0, 0, 56);
+    font-weight: 600;
+    /*color:  rgba(73, 72, 71, 1);*/
+}
+
+.darkmode .autor-date__full-date{
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
 }
 
 
