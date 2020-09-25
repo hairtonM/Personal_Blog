@@ -56,7 +56,7 @@ body{
     --backColorHeader: rgba(73, 72, 72, 1);
     --backColorMenuGeneral: rgba(0, 0, 0, 1);
     --backColorCardDescription: #ef5734;
-    --backColorCardsTitle: rgba(0, 0, 0, 0.75);
+    --backColorCardsTitle:rgba(42, 42, 42, 0.8);
     --backColorAcordionButton: rgba(36, 113, 173, 0.95);
     --backColorActiveAcordionButton: rgba(39, 144, 225, 1);
     --backColorCarousel: rgba(0, 0, 0, 0.53);
@@ -297,55 +297,54 @@ body{
 
 .cards{
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     justify-content: center;
     width: 14em;
     height: auto;
     margin: 2.5em auto;
-    border: 3px solid #ddd;
-    /*border: 3px solid rgba(0, 0, 0, 0.65);*/
+    border: 1px solid rgba(42, 42, 42, 0.23);
     border-top-left-radius: 2.5em;
     border-bottom-right-radius: 2.5em;
-    box-shadow: 0 2px 10px #222;
+    box-shadow: 0 2px 7px rgba(72, 72, 72, 0.16);
 }
 
 .cards:active{
     transform: scale(0.95);
-    box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.45);
+    box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.35);
 }
 
 .cards__img{
-    width: var(--widthCardImg);
-    height: var(--heightCardImg);
-    margin: 0 auto;
+    /*width: var(--widthCardImg);
+    height: var(--heightCardImg);*/
+    flex: 1 100%;
+    width: 100%;
+    height: auto;
+    margin: 0;
     padding: 1em;
 }
 
 .cards__title{
-    flex: 1 1 auto;
+    /*outline: 2px solid red;*/
+    flex: 1 100%;
     text-align: center;
     padding: 0.5em 0.25em 0.7em 0.25em;
     background-color: var(--backColorCardsTitle);
+    color: #ddd;
     font-size: var(--size_cardsTitle);
     font-family: var(--fontFamilyTitulos);
-    color: var(--color_white);
     margin: 0;
-    text-decoration-color: steelblue;
-    text-decoration-line: underline;
-}
-
-.cards__title:active, .cards__title:hover{
-    color: steelblue;
+    font-weight: 600;
+    transition: all .2s;
 }
 
 .cards__description{
-    margin: 0;
-    padding: 0.5em 0.25em 0.5em 1em;
-    font-size: var(--size_cardsDescription);
-    color: var(--color_black);
+    /*outline: 2px solid blue;*/
+    margin: 1em 0 1.5em 0;
+    padding: 0 0.5em 0 1em;
+    font-size: 0.95em;
+    color: rgba(42, 42, 42, 0.6);
     font-weight: 600;
-    background-color: var(--backColorCardDescription);
-    border-bottom-right-radius: 2em;
+    line-height: 1.6em;
 }
 
 /* ESTILOS PARA EL ARCORDIÓN EN EL HTML BLOG */
@@ -1069,6 +1068,21 @@ body{
     font-weight: 600;
 }
 
+/* estilos darkmode para los CARDS EN MI WEBSITE */
+
+.darkmode .cards{
+    border: 1px solid #ccc;
+}
+
+.darkmode .cards__title{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #222;
+}
+
+.darkmode .cards__description{
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.55);
+}
 
 /* -------------------------- UTILIZANDO MEDIA QUERIES -------------------------- */
 
