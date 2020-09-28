@@ -1,5 +1,5 @@
 /* 
-    THIS SCRIPT GIVE ME CONTROL MY ACORDION INFO 
+    THIS SCRIPT GIVE ME CONTROL OF THE CAROUSEL
 */
 
 
@@ -24,7 +24,7 @@ const showSlides = () => {
 
     if(slideIndex > divSlides.length){ slideIndex = 1}
 
-    divSlides[slideIndex - 1].style.display = "flex"
+    divSlides[slideIndex - 1].style.display = "block"
 
     setTimeout(showSlides, 4000)
 }

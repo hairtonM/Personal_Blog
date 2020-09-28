@@ -296,6 +296,7 @@ body{
 }
 
 .cards{
+    /*outline: 2px solid blue;*/
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -423,58 +424,24 @@ body{
 /* ESTILOS PARA EL CAROUSEL IMAGES */
 
 .main-carousel{
+    /*outline: 2px solid blue;*/
     display: block;
-    padding: 2em;
-    margin: 4em auto;
-    background-color: var(--backColorCarousel);
-}
-
-.slides{
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: auto;
-    padding: 1em;
-    border: 3px solid #ddd;
-    background-color: var(--backColorSlidesCarousel);
-    border-radius: 2em;
-    box-shadow: -9px 12px 15px rgba(0, 0, 0, 0.26);
+    padding: 0.5em;
+    margin: 6em 0 7em 0;
+    /*background-color: var(--backColorCarousel);*/
 }
 
 .slides__img{
-    flex: 1 1 auto;
-    width: var(--widthSlidesImg);
-    height: var(--heihgtSlidesImg);
-}
-
-.slides__title{
-    flex: 1 1 auto;
-    font-size: var(--size_h4);
-    color: var(--colorDDD);
-    margin: 0.5em 0;
-    font-family: var(--fontFamilyTitulos);
-}
-
-.slides__list{
-    margin: 0;
-    font-size: var(--size_a);
-    padding: 0;
-}
-
-.slides__listItem{
-    line-height: 1.6em;
-    color: var(--colorEEE); 
-    font-family: var(--fontFamilyParrafos);
-}
-
-.slides__link{
     /*outline: 2px solid red;*/
-    color: var(--colorEEE);
-    border-bottom: 4px solid steelblue;
-    padding: 0;
-    text-decoration: none;
+    display: flex; 
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    object-fit: cover;
+    /*width: var(--widthSlidesImg);
+    height: var(--heihgtSlidesImg);*/
 }
 
 /* ESTILOS PARA LOS BOTONES DE DOWNLOAD THE SOURCE CODE */ 
@@ -1410,43 +1377,14 @@ body{
 
     .main-carousel{
         /*outline: 4px solid red;*/
-        display: flex;
-        width: 100%;
-        height: 32em;
-        background-color: #fff;
-        margin: 2em 0 7em 0;
-        padding: 0;
     }
 
-    .slides{
+    .slides__img{
         /*outline: 2px solid blue;*/
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
-        padding: 2em 0;
-        /*background-image: url("../img/backAsideImage.jpg");*/
-        background-image: url("../img/backImagePrueba.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center top;
-        background-attachment: fixed;
-        border: none;
-        border-radius: 0;
+        width: 50em;
+
     }
 
-    .slides__title{
-        color: var(--color_black);
-        font-weight: 800;
-    }
-
-    .slides__list, .slides__listItem{
-        font-weight: 700;
-        color: var(--color_black);
-    }
-
-    .slides__link{
-        color: var(--color_steelblue);
-    }
 
     /* ESTILOS PARA EL BOX DE CONTENIDOS DENTRO DE LA SECCIÓN "BLOG" */
 
