@@ -96,5 +96,5 @@ iconWhatsapp.addEventListener('click', () => {
     hideModal(mainModal)
     setTitlelModal(titleModal, "Hairton M.")
     setImageModal(imgModal, "../img/whatsapp.png")
-    descpModal.innerHTML = `Hola, Mucho gusto, Escribeme a mi Whatsapp Personal (+51 920-803-441)  <a href="https://api.whatsapp.com/send?phone=51920803441&text=Hola! Mucho gusto%20quisiera%20contactarte" target="_blank" class="modal-box__link">Go</a>`
+    descpModal.innerHTML = `Hola, Mucho gusto, si deseas más info aquí esta mi Whatsapp Personal (+51 920-803-441)  <a href="https://api.whatsapp.com/send?phone=51920803441&text=Hola! Mucho gusto%20quisiera%20contactarte" target="_blank" class="modal-box__link">Go</a>`
 })
