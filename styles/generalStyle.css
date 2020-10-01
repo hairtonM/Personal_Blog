@@ -84,8 +84,8 @@ body{
     --widthSlidesImg: 10em;
     --heihgtSlidesImg: 10em;
 
-    --widthAsideInfoImg: 7em;
-    --heightAsideInfoImg: 7em;
+    --widthAsideInfoImg: 4em;
+    --heightAsideInfoImg: 4em;
 }
 
 
@@ -973,8 +973,8 @@ body{
 }
 
 .go-up::after{
-    content: url("../img/icon-go-up.png");
     /*outline: 2px solid blue;*/
+    content: url("../img/icon-go-up.png");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1185,8 +1185,6 @@ body{
     .aside-info__img{
         /*outline: 2px solid green;*/
         display: block;
-        width: 6em;
-        height: 6em;
     }
 
     .paragraph--aside{

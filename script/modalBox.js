@@ -49,7 +49,7 @@ btnCloseModal.addEventListener('click', () => {
 iconGithub.addEventListener('click', () => {
     hideModal(mainModal)
     setTitlelModal(titleModal, "hairtonM")
-    setImageModal(imgModal, "../img/second_github.png")
+    setImageModal(imgModal, "../img/github_big_modal.png")
     descpModal.innerHTML = `
         En mi repositorio encontraras mis útlimos proyectos 🙌😃 de Desarrollo Web.
     `
@@ -63,8 +63,8 @@ iconGithub.addEventListener('click', () => {
 
 iconYoutube.addEventListener('click', () => {
     hideModal(mainModal)
-    setTitlelModal(titleModal, "HM Tech")
-    setImageModal(imgModal, "../img/myPhotoYoutube.jpg")
+    setTitlelModal(titleModal, "TCodeWeb")
+    setImageModal(imgModal, "../img/myPhotoYoutube.png")
     descpModal.innerHTML = `
         Este canal tiene como propòsito enseñar y otorgar los conocimientos necesarios en el mundo del Desarrollo Web.
     `
@@ -121,7 +121,7 @@ iconImstagram.addEventListener('click', () => {
 iconWhatsapp.addEventListener('click', () => {
     hideModal(mainModal)
     setTitlelModal(titleModal, "Hairton M.")
-    setImageModal(imgModal, "../img/whatsapp.png")
+    setImageModal(imgModal, "../img/whatsapp_big_modal.png")
     descpModal.innerHTML = `
         Hola, Mucho gusto, si deseas más info aquí esta mi Whatsapp Personal (+51 920-803-441)
     `
