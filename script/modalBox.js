@@ -112,7 +112,7 @@ iconImstagram.addEventListener('click', () => {
         Apasionado por el diseño, autodidacta en el modelamiento y desarrollo de websites.  
     `
     btnGo.innerHTML = `
-        <a href="https://www.instagram.com/htm_css_js_hairton/?hl=en" target="_blank" class="modal-box__link">Go</a>
+        <a href="https://www.instagram.com/web_hairton/?hl=en" target="_blank" class="modal-box__link">Go</a>
     `
 })
 
