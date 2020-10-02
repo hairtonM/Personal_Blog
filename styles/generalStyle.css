@@ -717,11 +717,11 @@ body{
 /* esta clase me permite dar estilos a las imagen de codigos que tenga (carbon) */
 
 .codes{
-    /*outline: 2px solid blue;*/
+    outline: 2px solid red;
     display: block;
     width: 100%;
     height: auto;
-    margin: 0 auto;
+    margin: 1em auto;
     padding: 0em;
 }
 
@@ -731,17 +731,20 @@ body{
 
 /* estilos para los codigos que esta dentro del aside como imagen */
 
-.codes-img-aside{
-    /*outline: 2px solid blue;*/
-    margin: 1em 0;
+.main-codes{
+    /*outline: 2px solid red;*/
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    padding: 1em;
 }
 
-.codes-aside{
-    /*outline: 2px solid blue;*/
-    display: flex;
-    width: 100%;
-    height: auto;
+.codes-img-aside{
+    outline: 2px solid red;
+    margin: 2em 0;
+    padding: 1em;
 }
+
 
 /* ********************** ESTILOS PARA EL FOOTER EN MOBILES *********************** */ 
 
@@ -1162,7 +1165,6 @@ body{
 
     .codes{
         /*outline: 2px solid blue;*/
-        display: block;
         width: 100%;
         padding: 0.5em;
         margin: 0;
@@ -1192,7 +1194,7 @@ body{
     }
 
     .aside-info__img{
-        /*outline: 2px solid green;*/
+        outline: 2px solid green;
         display: block;
     }
 
@@ -1585,12 +1587,6 @@ body{
     .codes-img-aside{
         /*outline: 4px solid red;*/
         padding: 3em;
-        margin: 0;
-    }
-
-    .codes-aside{
-        width: 90%;
-        height: auto;
         margin: 0;
     }
 
