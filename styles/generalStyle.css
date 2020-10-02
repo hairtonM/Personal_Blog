@@ -585,24 +585,24 @@ body{
 .info-autor__img{
     /*outline: 2px solid black;*/
     flex: 1 15%;
-    width: 100%;
+    width: 40px;
     height: auto;
-    padding: 0.07em;
+    padding: 0;
     margin: 0;
-    object-fit: cover;
     border-radius: 50%;
 }
 
 .autor-date{
+    /*outline: 2px solid blue;*/
     flex: 1 75%;
 }
 
 .info-autor__icon{
-    /*outline: 2px solid black;*/
+    /*outline: 2px solid red;*/
     flex: 1 10%;
-    width: 100%;
-    height: 1.5em;
-    padding: 0 0.7em 0 0;
+    width: 27px;
+    height: auto;
+    padding: 0;
     margin: 0;
 }
 
@@ -875,8 +875,8 @@ body{
     grid-column: 2;
     grid-row: 1;
     color: var(--colorEEE);
-    font-size: var(--size_h6);
-    text-align: center;
+    font-size: calc(var(--size_h6) - 8px);
+    text-align: left;
     margin: 0;
     padding: 0.25em 0 0 0;
 }
@@ -900,7 +900,7 @@ body{
     width: 100%;
     color: var(--colorDDD);
     line-height: 1.6em;
-    font-size: 0.95em;
+    font-size: 0.85em;
     padding: 0.25em 0.25em 0.25em 0.7em;
     margin: 0;
 }
@@ -1169,6 +1169,7 @@ body{
 
     }
 
+
     /* ***************************** ESTILOS PARA EL ASIDE EN TABLETS ***************************** */
 
     .aside{
@@ -1178,7 +1179,7 @@ body{
     }
 
     .aside-info__img{
-        outline: 2px solid green;
+        /*outline: 2px solid green;*/
         display: block;
     }
 
