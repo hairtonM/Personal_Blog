@@ -729,22 +729,6 @@ body{
     width: 50%;
 }
 
-/* estilos para los codigos que esta dentro del aside como imagen */
-
-.main-codes{
-    /*outline: 2px solid red;*/
-    display: flex;
-    flex-flow: column wrap;
-    width: 100%;
-    padding: 1em;
-}
-
-.codes-img-aside{
-    outline: 2px solid red;
-    margin: 2em 0;
-    padding: 1em;
-}
-
 
 /* ********************** ESTILOS PARA EL FOOTER EN MOBILES *********************** */ 
 
@@ -1574,21 +1558,6 @@ body{
         font-weight: 700;
     }
 
-    /* estilos para los codigos que esta dentro del aside como imagen */
-
-    .main-codes{
-        /*outline: 2px solid blue;*/
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .codes-img-aside{
-        /*outline: 4px solid red;*/
-        padding: 3em;
-        margin: 0;
-    }
 
     /* ********************** ESTILOS PARA EL FOOTER EN LAPTOPS Y COMPUTADORAS ********************** */
 
