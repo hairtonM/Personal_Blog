@@ -717,7 +717,7 @@ body{
 /* esta clase me permite dar estilos a las imagen de codigos que tenga (carbon) */
 
 .codes{
-    outline: 2px solid red;
+    /*outline: 2px solid red;*/
     display: block;
     width: 100%;
     height: auto;
