@@ -1575,15 +1575,8 @@ body{
         text-shadow: -2px -1px 4px rgba(0, 0, 0, 0.76);
     }
 
-    .socialCode__codepen-link:hover::after, .socialCode__jsFiddle-link:hover::after{
-        content: url("../img/linkToMyCode.png");
-        display: inline-flex;
-        margin-left: 0.5em;
-        widtH: 1.05em;
-        height: 1.05em;
-    }
-
     .iconsSocialNetworks__image{
+        /*outline: 2px solid blue;*/
         width: 1.85em;
         transition: all .7s;
     }
