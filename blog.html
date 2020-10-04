@@ -71,6 +71,82 @@
 
                 <div class="main-blog">
                     <div class="blog-info">
+                        <h2 class="blog-info__title" id="variables_css_03_10_2020">Usando Las Variables en CSS (Cascading Style Sheets)</h2>
+
+                        <span class="blog-info__autor">
+                            <b class="font-bold font-bold--infoBlog">Autor: </b> Hairton Mayhuay &rArr;
+                            <b class="font-bold font-bold--infoBlog">Fecha: </b> 03/10/2020
+                        </span>
+
+                        <p class="paragraph paragraph--section-bigDevice">
+                            Hola a todos y Bienvenidos! en este post vamos a aprender acerca de los conceptos que trae consigo las mejoras de CSS <b class="font-bold">(Cascading Style Sheets)</b> y además lo pondremos en práctica.
+                        </p>
+
+                        <p class="paragraph paragraph--section-bigDevice">
+                            Empezemos por definir que son las variables. Aunque la mayoria de seguro sabe su significado. En este 
+                            blog no suponemos que los lectores tengan conocimientos previos en tecnología, aquí lo hacemos sencillo.
+                        </p>
+                        
+                        <p class="paragraph paragraph--section-bigDevice">
+                            Muy bien, una variable en programación, es cómo una pequeña <b class="font-bold">cajita</b> en donde puedes guardar lo que desees, sin importar las <b class="font-bold">caracteristicas del objeto</b>. Ahora bien, la <b class="font-bold">caja es la variable</b> y <b class="font-bold"> los objetos</b> que coloquemos en ella, <b class="font-bold">pueden ser números, letras entre otros</b>. Partiendo del tema de este post <b class="font-bold">"Varibles en CSS"</b>, en una variable podemos guardar los colores para una letra, el color de fondo para un elemento, el tamaño de letra, el ancho y altura de un elemento entre otras cosas.
+                        </p>
+
+                        <p class="paragraph paragraph--section-bigDevice">
+                            Pero, veamos un pequeño código en CSS en donde guardaremos los colores de fondo, ancho y altura de un elemento <b class="font-bold">HTML (HYPER TEXT MARKUP LANGUAGE)</b> que en este ejemplo será un <b class="font-bold">elemento "div"</b>, el cual es un elemento en bloque. 
+                        </p>
+
+                        <img src="./img/ejemplo_general_variables_css.png" alt="ejemplo general variables css" class="codes codes--bigDevice">
+
+                        <p class="paragraph paragraph--section-bigDevice">
+                            Como pueden visualizar otorgue a mi elemento <b class="font-bold">"div"</b> un ancho y altura de <b class="font-bold">100px</b>, con un color de fondo <b class="font-bold">steelblue</b>, la ventaja de usar estas 3 variables que definimos <b class="font-bold">--backColorDiv, --widthDiv, --heightDiv</b> es que podemos cambiar sus valores. Supongamos que tenemos <b class="font-bold">10 divs</b>, tendríamos que definir dentro de cada una de ellas los mismos valores y es tedioso.
+                        </p>
+
+                        <p class="paragraph paragraph--section-bigDevice">
+                            Ahora bien, el código  que observamos no nos dice mucho sobre la razón principal, por la cual usar las variables CSS en nuestro dia dia, cuando desarrollamos una website. Así que veamos sus ventajas.                 
+                        </p>
+
+                        <p class="paragraph paragraph--section-bigDevice">
+                            Primero ya sabemos que una variable nos <b class="font-bold">permite guardar un valor</b>, pero no solo eso, sino que debemos <b class="font-bold">otorgarle un nombre</b> a esa variable para luego poder utilizarla, en cualquier momento. El objetivo de las variables CSS,<b class="font-bold"> es reutilizar el código</b>. Y esto lo vamos a ver en un ejemplo prático. Pero, primero debemos responder a preguntas cómo: <b class="font-bold">¿Dé que forma se declaran variables en CSS?, ¿Cómo puedo llamar a esas variables? y ¿En qué parte de nuestro código CSS guardamos esas variables?.</b>
+                        </p>
+
+                        <p class="paragraph paragraph--section-bigDevice">
+                            Para declarar variables CSS se hace uso del siguiente signo <b class="font-bold"> " -- " </b>, es decir <b class="font-bold">dos guiones</b>, luego se coloca el nombre que tendrá nuestra variable seguido por su valor, por ejemplo:
+                        </p>
+
+                        <img src="./img/declarar_variables_css_example.png" alt="declarando variables css" class="codes codes--bigDevice">
+
+                        <p class="paragraph paragraph--section-bigDevice">
+                            Ahora bien <b class="font-bold">¿Cómo llamamos a una variable después de crearla?</b>, cabe resaltar que podemos definir nuestras variables con el nombre que queramos. Continuamos, para poder utilizarla y a sí mismo poder acceder a sus valores, podemos hacerlo mediante la <b class="font-bold">función var()</b> y dentro de esta podemos colocar el nombre de la variable tal como la declaramos. por ejemplo:
+                        </p>
+
+                        <img src="./img/usando_variables_css.png" alt="usando variables css" class="codes codes--bigDevice">
+
+                        <p class="paragraph paragraph--section-bigDevice">
+                            <b class="font-bold">Nota:</b> Si declaras variables CSS con minúscula o mayúscula o combinadas debes colocarlo dentro de la <b class="font-bold">función var()</b> tal como las declaraste ya que es case sensitive. <b class="font-bold">Ya que no es lo mismo --myColor a  --mycolor.</b>
+                        </p>
+
+                        <p class="paragraph paragraph--section-bigDevice">
+                            Podemos declarar variables CSS en dos lugares uno es <b class="font-bold">dentro del scope (es el alcance de una variable)</b> de los estilos que en ese momento definamos a un elemento HTML. por ejemplo: 
+                        </p>
+
+                        <img src="./img/variables_dentro_scope_css.png" alt="variables dentro del scope" class="codes codes--bigDevice">
+
+                        <p class="paragraph paragraph--section-bigDevice">
+                            Esto resulta muy práctico, pero que tal si tenemos más de un elemento que utilizan esos estilos. Si declararamos variables con el mismo valor para cada elemento HTML sería tedioso y muy poco práctico <b class="font-bold">¿Existe algo que podamos hacer para que las variables sean globales?</b>, gracias a Dios si. Podemos declarar variables fuera del scope de los estilos que estemos otorgando a los elementos HTML. Usando el <b class="font-bold">pseudoelemento ":root{}"</b>, en el declaramos las variables que creamos necesarias para el desarrollo de nuestra website, por ejemplo: 
+                        </p>
+
+                        <img src="./img/variables_dentro_root_css.png" alt="variables dentro de root" class="codes codes--bigDevice">
+
+                        <p class="paragraph paragraph--section-bigDevice">
+                            Como se puede visualizar dentro de <b class="font-bold">:root</b> declaro todas las variables css y las puedo utilizar en cualquier momento y para cualquier elemento HTML. No esta definido dentro de ningún scope sino más bien de manera <b class="font-bold">global</b> para todo el html. 
+                        </p>
+
+                        <p class="paragraph paragraph--section-bigDevice">
+                            Sabiendo aquello ya podemos usar el poder de las variables o también llamadas <b class="font-bold">propiedades CSS personalizadas</b>. Ahora bien, esto no es todo. A continuación dejaré un enlace al código de un ejemplo práctico y divertido en <b class="font-bold">"codepen.io"</b>. Ustedes pueden jugar con las variables, cambiar sus valores o escoger los suyos. Espero esto les sirva, recuerden siempre aprender y nunca rendirse. <b class="font-bold">Enlace: </b> <a href="https://codepen.io/Hairton_M/pen/XWdvzZz" target="_blank">Variables CSS Codepen.io</a>
+                        </p>
+                    </div>
+
+                    <div class="blog-info">
                         <h2 class="blog-info__title" id="myOpinionHTML-info-blog">HTML un lenguaje con una historia increible y emocionante</h2>
 
                         <span class="blog-info__autor">
@@ -110,7 +186,7 @@
 
                         <span class="blog-info__autor">
                             <b class="font-bold font-bold--infoBlog">Autor: </b> Hairton Mayhuay &rArr;
-                            <b class="font-bold font-bold--infoBlog">Fecha: </b> --/09/2020
+                            <b class="font-bold font-bold--infoBlog">Fecha: </b> 25/09/2020
                         </span>
 
                         <img src="./img/variables_css_icon.png" alt="variables in the css" class="article__img">
